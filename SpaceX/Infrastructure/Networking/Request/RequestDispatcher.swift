@@ -9,6 +9,6 @@ import Foundation
 
 // MARK: Protocol
 
-protocol RequestDispatcher: class {
+protocol RequestDispatcher: AnyObject {
     func execute<T: Decodable>(_ request: Request, completion: @escaping (Result<T, Error>) -> Void)
 }

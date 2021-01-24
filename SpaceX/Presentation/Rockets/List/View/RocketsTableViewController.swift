@@ -26,20 +26,19 @@ final class RocketsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(cellType: RocetsTableViewCell.self)
+        tableView.register(cellType: RocketsTableViewCell.self)
     }
 }
 
 // MARK: UITableViewDataSource, UITableViewDelegate
-// https://www.swiftbysundell.com/articles/reusable-data-sources-in-swift/
 
 extension RocketsTableViewController {
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
         items.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> RocetsTableViewCell {
-        let cell = tableView.dequeueReusableCell(for: indexPath) as RocetsTableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(for: indexPath) as RocketsTableViewCell
         cell.configure(with: items[indexPath.row])
         return cell
     }

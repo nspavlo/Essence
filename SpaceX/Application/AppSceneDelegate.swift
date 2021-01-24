@@ -26,7 +26,7 @@ extension SceneDelegate {
     func setupAppFlowCoordinator(with navigationController: UINavigationController) {
         coordinator = AppFlowCoordinator(
             navigationController: navigationController,
-            appFlowFactory: AppFlowFactory(environment: .development)
+            appFlowFactory: AppFlowFactory()
         )
         coordinator?.start()
     }

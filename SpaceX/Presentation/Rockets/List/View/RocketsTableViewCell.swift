@@ -1,5 +1,5 @@
 //
-//  RocetsTableViewCell.swift
+//  RocketsTableViewCell.swift
 //  SpaceX
 //
 //  Created by Jans Pavlovs on 23/01/2021.
@@ -9,15 +9,15 @@ import UIKit
 
 // MARK: Initialization
 
-final class RocetsTableViewCell: UITableViewCell {}
+final class RocketsTableViewCell: UITableViewCell {}
 
 // MARK: Reusable
 
-extension RocetsTableViewCell: Reusable {}
+extension RocketsTableViewCell: Reusable {}
 
 // MARK: Configuration
 
-extension RocetsTableViewCell {
+extension RocketsTableViewCell {
     func configure(with viewModel: RocketsListItemViewModel) {
         textLabel?.text = viewModel.title
     }

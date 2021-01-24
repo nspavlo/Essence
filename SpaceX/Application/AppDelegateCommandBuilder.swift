@@ -13,6 +13,8 @@ protocol Command {
     func execute()
 }
 
+// MARK: -
+
 // MARK: Initialization
 
 final class AppDelegateCommandBuilder {

@@ -9,14 +9,16 @@ import Foundation
 
 // MARK: Initialization
 
-struct AppFlowFactory {
-    let environment: Environment
+final class AppFlowFactory {
+    lazy var dispatcher: RequestDispatcher = {
+        AFRequestDispatcher(environment: .development)
+    }()
 }
 
 // MARK: -
 
 extension AppFlowFactory {
     func createRocketsFlowFactory() -> RocketsFlowFactory {
-        RocketsFlowFactory()
+        RocketsFlowFactory(dispatcher: dispatcher)
     }
 }

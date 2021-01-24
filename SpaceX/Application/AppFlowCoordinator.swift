@@ -13,6 +13,8 @@ protocol Coordinator {
     func start()
 }
 
+// MARK: -
+
 // MARK: Initialization
 
 final class AppFlowCoordinator {

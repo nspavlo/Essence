@@ -48,8 +48,6 @@ private extension RocketsContainerViewController {
         }
     }
 
-    // TODO: Inspect delegate vs closure
-    // Lookup objc.io diagram
     func render(_ state: RocketsListViewModelState) {
         switch state {
         case .loading:

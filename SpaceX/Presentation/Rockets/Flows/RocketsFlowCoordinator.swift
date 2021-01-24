@@ -11,9 +11,14 @@ import UIKit
 
 final class RocketsFlowCoordinator {
     private let navigationController: UINavigationController
+    private let rocketsFlowFactory: RocketsFlowFactory
 
-    init(navigationController: UINavigationController) {
+    init(
+        navigationController: UINavigationController,
+        rocketsFlowFactory: RocketsFlowFactory
+    ) {
         self.navigationController = navigationController
+        self.rocketsFlowFactory = rocketsFlowFactory
     }
 }
 
@@ -25,7 +30,8 @@ extension RocketsFlowCoordinator: Coordinator {
     }
 
     func showRocketsList(animated: Bool) {
-        let viewModel = RocketsListController()
+        let repository = rocketsFlowFactory.createRocketsRepository()
+        let viewModel = RocketsListController(repository: repository)
         viewModel.showRocketDetails = { rocket in
             self.showRocketDetails(with: rocket, animated: true)
         }

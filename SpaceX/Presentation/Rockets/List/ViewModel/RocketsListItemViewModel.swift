@@ -15,10 +15,6 @@ struct RocketsListItemViewModel {
     let title: String
 }
 
-// MARK: Equatable
-
-extension RocketsListItemViewModel: Hashable {}
-
 // MARK: Mapping
 
 extension RocketsListItemViewModel {

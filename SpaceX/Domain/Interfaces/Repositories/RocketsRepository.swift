@@ -8,6 +8,5 @@
 import Foundation
 
 protocol RocketsRepository {
-    @discardableResult
-    func fetch(with completion: Result<Rockets, Error>) -> Cancellable
+    func fetch(with completion: @escaping (Result<Rockets, Error>) -> Void)
 }

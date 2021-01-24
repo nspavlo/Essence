@@ -14,3 +14,7 @@ typealias Rockets = [Rocket]
 struct Rocket {
     let name: String
 }
+
+// MARK: Decodable
+
+extension Rocket: Decodable {}

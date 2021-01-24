@@ -29,6 +29,8 @@ protocol RocketsListViewModelOutput: AnyObject {
 
 typealias RocketsListViewModel = RocketsListViewModelInput & RocketsListViewModelOutput
 
+// MARK: -
+
 // MARK: Initialization
 
 final class RocketsListController: RocketsListViewModel {
@@ -37,6 +39,11 @@ final class RocketsListController: RocketsListViewModel {
 
     private var items: [RocketsListItemViewModel] = []
     private var rockets: Rockets = []
+    private let repository: RocketsRepository
+
+    init(repository: RocketsRepository) {
+        self.repository = repository
+    }
 }
 
 // MARK: RocketsListViewModelInput
@@ -45,19 +52,42 @@ extension RocketsListController {
     func viewDidLoad() {
         changeState?(.loading)
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) { [self] in
-            rockets = [
-                Rocket(name: "F1"),
-                Rocket(name: "F2"),
-                Rocket(name: "F3")
-            ]
+        repository.fetch { [weak self] result in
+            guard let self = self else { return }
 
-            items = rockets.map(RocketsListItemViewModel.init(_:))
-            changeState?(.result(.success(items)))
+            switch result {
+            case .success(let rockets):
+                self.rockets = rockets
+                self.items = rockets.map(RocketsListItemViewModel.init(_:))
+                self.changeState?(.result(.success(self.items)))
+            case .failure(let error):
+                self.changeState?(.result(.failure(error)))
+            }
         }
     }
 
     func didSelectItem(at indexPath: IndexPath) {
         showRocketDetails?(rockets[indexPath.row])
+    }
+}
+
+// MARK: -
+
+// MARK: Initialization
+
+final class RemoteRocketsRepository {
+    let dispatcher: RequestDispatcher
+
+    init(dispatcher: RequestDispatcher) {
+        self.dispatcher = dispatcher
+    }
+}
+
+// MARK: RocketsRepository
+
+extension RemoteRocketsRepository: RocketsRepository {
+    func fetch(with completion: @escaping (Result<Rockets, Error>) -> Void) {
+        let request = Request(method: .get, endpoint: .rockets, params: nil)
+        dispatcher.execute(request, completion: completion)
     }
 }
