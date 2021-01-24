@@ -7,10 +7,7 @@
 
 import Foundation
 
-// https://github.com/Moya/Moya
-// https://github.com/Alamofire/Alamofire
-
 protocol RocketsRepository {
     @discardableResult
-    func fetchRockets(with completion: Result<Rockets, Error>) -> Cancellable
+    func fetch(with completion: Result<Rockets, Error>) -> Cancellable
 }

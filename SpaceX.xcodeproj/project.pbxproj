@@ -26,12 +26,14 @@
 		3DBF86C425BC465500D4A280 /* RocketsLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86C325BC465500D4A280 /* RocketsLoaderViewController.swift */; };
 		3DBF86C825BC491400D4A280 /* RocketsErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86C725BC491400D4A280 /* RocketsErrorViewController.swift */; };
 		3DBF86D225BC514200D4A280 /* RocketsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86D125BC514200D4A280 /* RocketsTableViewController.swift */; };
-		3DBF86E325BC5C3900D4A280 /* UITableViewCell+Rockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86E225BC5C3900D4A280 /* UITableViewCell+Rockets.swift */; };
 		3DBF86E825BC5DAE00D4A280 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86E725BC5DAE00D4A280 /* Reusable.swift */; };
 		3DBF86F625BC5F3C00D4A280 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86F525BC5F3C00D4A280 /* UITableView+Reusable.swift */; };
 		3DBF86FA25BC5FD700D4A280 /* RocetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86F925BC5FD700D4A280 /* RocetsTableViewCell.swift */; };
 		3DBF870325BC68A400D4A280 /* RocketsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF870225BC68A400D4A280 /* RocketsRepository.swift */; };
 		3DBF870D25BC69F800D4A280 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF870C25BC69F800D4A280 /* Cancellable.swift */; };
+		3DBF871825BD7E0100D4A280 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF871725BD7E0100D4A280 /* Environment.swift */; };
+		3DBF872225BD7EE300D4A280 /* RequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF872125BD7EE300D4A280 /* RequestDispatcher.swift */; };
+		3DBF872825BD7F1900D4A280 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF872725BD7F1900D4A280 /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,12 +70,14 @@
 		3DBF86C325BC465500D4A280 /* RocketsLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsLoaderViewController.swift; sourceTree = "<group>"; };
 		3DBF86C725BC491400D4A280 /* RocketsErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsErrorViewController.swift; sourceTree = "<group>"; };
 		3DBF86D125BC514200D4A280 /* RocketsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsTableViewController.swift; sourceTree = "<group>"; };
-		3DBF86E225BC5C3900D4A280 /* UITableViewCell+Rockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Rockets.swift"; sourceTree = "<group>"; };
 		3DBF86E725BC5DAE00D4A280 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		3DBF86F525BC5F3C00D4A280 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		3DBF86F925BC5FD700D4A280 /* RocetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocetsTableViewCell.swift; sourceTree = "<group>"; };
 		3DBF870225BC68A400D4A280 /* RocketsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsRepository.swift; sourceTree = "<group>"; };
 		3DBF870C25BC69F800D4A280 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
+		3DBF871725BD7E0100D4A280 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		3DBF872125BD7EE300D4A280 /* RequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDispatcher.swift; sourceTree = "<group>"; };
+		3DBF872725BD7F1900D4A280 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 				3DBF865A25BC1F8700D4A280 /* Application */,
 				3DBF870B25BC69EE00D4A280 /* Common */,
 				3DBF86A825BC2C2600D4A280 /* Domain */,
+				3DBF871525BD7DE700D4A280 /* Infrastructure */,
 				3DBF868F25BC295E00D4A280 /* Presentation */,
 				3DBF865F25BC1FB100D4A280 /* Resources */,
 			);
@@ -275,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				3DBF86E625BC5DA700D4A280 /* Reusable */,
-				3DBF86E225BC5C3900D4A280 /* UITableViewCell+Rockets.swift */,
 				3DBF86BD25BC44E700D4A280 /* UIViewController+Embed.swift */,
 			);
 			path = Extensions;
@@ -319,6 +323,32 @@
 				3DBF870C25BC69F800D4A280 /* Cancellable.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		3DBF871525BD7DE700D4A280 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF871625BD7DF700D4A280 /* Networking */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		3DBF871625BD7DF700D4A280 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF873125BD7FAD00D4A280 /* Request */,
+				3DBF871725BD7E0100D4A280 /* Environment.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3DBF873125BD7FAD00D4A280 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF872725BD7F1900D4A280 /* Request.swift */,
+				3DBF872125BD7EE300D4A280 /* RequestDispatcher.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,8 +458,11 @@
 				3DBF86C825BC491400D4A280 /* RocketsErrorViewController.swift in Sources */,
 				3DBF86F625BC5F3C00D4A280 /* UITableView+Reusable.swift in Sources */,
 				3DBF86A325BC2BC400D4A280 /* RocketsListViewModel.swift in Sources */,
+				3DBF871825BD7E0100D4A280 /* Environment.swift in Sources */,
 				3DBF86FA25BC5FD700D4A280 /* RocetsTableViewCell.swift in Sources */,
 				3DBF869525BC29DF00D4A280 /* RocketsFlowCoordinator.swift in Sources */,
+				3DBF872225BD7EE300D4A280 /* RequestDispatcher.swift in Sources */,
+				3DBF872825BD7F1900D4A280 /* Request.swift in Sources */,
 				3DBF86B325BC395F00D4A280 /* RocketsContainerViewController.swift in Sources */,
 				3DBF868A25BC280300D4A280 /* RocketsFlowFactory.swift in Sources */,
 				3DBF867D25BC23CA00D4A280 /* AppFlowFactory.swift in Sources */,
@@ -441,7 +474,6 @@
 				3DBF866A25BC206A00D4A280 /* AppDelegateCommandBuilder.swift in Sources */,
 				3DBF862525BC1ED300D4A280 /* AppDelegate.swift in Sources */,
 				3DBF862725BC1ED300D4A280 /* AppSceneDelegate.swift in Sources */,
-				3DBF86E325BC5C3900D4A280 /* UITableViewCell+Rockets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

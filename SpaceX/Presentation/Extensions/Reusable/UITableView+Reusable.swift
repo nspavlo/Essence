@@ -9,8 +9,6 @@ import UIKit
 
 // MARK: Registration
 
-// https://tinyurl.com/yyp4n4kn
-
 extension UITableView {
     func register<T: UITableViewCell>(cellType: T.Type) where T: Reusable {
         register(cellType.self, forCellReuseIdentifier: cellType.reuseIdentifier)

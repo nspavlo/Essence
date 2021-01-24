@@ -9,8 +9,6 @@ import Foundation
 
 // MARK: Protocol
 
-// https://tinyurl.com/yyp4n4kn
-
 protocol Reusable: AnyObject {
     static var reuseIdentifier: String { get }
 }

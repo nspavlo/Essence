@@ -9,7 +9,9 @@ import Foundation
 
 // MARK: Initialization
 
-final class AppFlowFactory {}
+struct AppFlowFactory {
+    let environment: Environment
+}
 
 // MARK: -
 
