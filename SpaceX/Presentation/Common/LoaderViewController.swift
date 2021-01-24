@@ -1,5 +1,5 @@
 //
-//  RocketsLoaderViewController.swift
+//  LoaderViewController.swift
 //  SpaceX
 //
 //  Created by Jans Pavlovs on 23/01/2021.
@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: Initialization
 
-final class RocketsLoaderViewController: UIViewController {
+final class LoaderViewController: UIViewController {
     private let activityIndicatorView = UIActivityIndicatorView(style: .medium)
 
     // MARK: UIViewController

@@ -51,14 +51,14 @@ private extension RocketsContainerViewController {
     func render(_ state: RocketsListViewModelState) {
         switch state {
         case .loading:
-            let viewController = RocketsLoaderViewController()
+            let viewController = LoaderViewController()
             replaceExisting(with: viewController, in: view)
         case .result(.success(let items)):
             let viewController = RocketsTableViewController(items: items)
             viewController.didSelectItem = viewModel.didSelectItem(at:)
             replaceExisting(with: viewController, in: view)
         case .result(.failure(let error)):
-            let viewController = RocketsErrorViewController(error: error)
+            let viewController = ErrorViewController(error: error)
             replaceExisting(with: viewController, in: view)
         }
     }

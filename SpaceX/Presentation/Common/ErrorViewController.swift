@@ -1,5 +1,5 @@
 //
-//  RocketsErrorViewController.swift
+//  ErrorViewController.swift
 //  SpaceX
 //
 //  Created by Jans Pavlovs on 23/01/2021.
@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: Initialization
 
-final class RocketsErrorViewController: UIViewController {
+final class ErrorViewController: UIViewController {
     private let label = UILabel()
     private let error: Error
 
