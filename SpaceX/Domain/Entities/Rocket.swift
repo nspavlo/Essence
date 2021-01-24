@@ -1,5 +1,5 @@
 //
-//  AppFlowContainer.swift
+//  Rocket.swift
 //  SpaceX
 //
 //  Created by Jans Pavlovs on 23/01/2021.
@@ -7,6 +7,10 @@
 
 import Foundation
 
+typealias Rockets = [Rocket]
+
 // MARK: Initialization
 
-final class AppFlowContainer {}
+struct Rocket {
+    let name: String
+}

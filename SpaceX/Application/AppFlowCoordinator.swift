@@ -17,16 +17,20 @@ protocol Coordinator {
 
 final class AppFlowCoordinator {
     private let navigationController: UINavigationController
-    private let appFlowContainer: AppFlowContainer
+    private let appFlowFactory: AppFlowFactory
 
-    init(navigationController: UINavigationController, appFlowContainer: AppFlowContainer) {
+    init(navigationController: UINavigationController, appFlowFactory: AppFlowFactory) {
         self.navigationController = navigationController
-        self.appFlowContainer = appFlowContainer
+        self.appFlowFactory = appFlowFactory
     }
 }
 
 // MARK: Coordinator
 
 extension AppFlowCoordinator: Coordinator {
-    func start() {}
+    func start() {
+        let rocketsFlowFactory = appFlowFactory.createRocketsFlowFactory()
+        let coordinator = rocketsFlowFactory.createRocketsFlowCoordinator(with: navigationController)
+        coordinator.start()
+    }
 }

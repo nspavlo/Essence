@@ -15,7 +15,23 @@
 		3DBF863C25BC1ED400D4A280 /* SpaceXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF863B25BC1ED400D4A280 /* SpaceXTests.swift */; };
 		3DBF866A25BC206A00D4A280 /* AppDelegateCommandBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF866925BC206A00D4A280 /* AppDelegateCommandBuilder.swift */; };
 		3DBF867525BC230100D4A280 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF867425BC230100D4A280 /* AppFlowCoordinator.swift */; };
-		3DBF867D25BC23CA00D4A280 /* AppFlowContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF867C25BC23CA00D4A280 /* AppFlowContainer.swift */; };
+		3DBF867D25BC23CA00D4A280 /* AppFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF867C25BC23CA00D4A280 /* AppFlowFactory.swift */; };
+		3DBF868A25BC280300D4A280 /* RocketsFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF868925BC280300D4A280 /* RocketsFlowFactory.swift */; };
+		3DBF869525BC29DF00D4A280 /* RocketsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF869425BC29DF00D4A280 /* RocketsFlowCoordinator.swift */; };
+		3DBF86A325BC2BC400D4A280 /* RocketsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86A225BC2BC400D4A280 /* RocketsListViewModel.swift */; };
+		3DBF86AB25BC2C4300D4A280 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86AA25BC2C4300D4A280 /* Rocket.swift */; };
+		3DBF86AF25BC2D0A00D4A280 /* RocketsListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86AE25BC2D0A00D4A280 /* RocketsListItemViewModel.swift */; };
+		3DBF86B325BC395F00D4A280 /* RocketsContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86B225BC395F00D4A280 /* RocketsContainerViewController.swift */; };
+		3DBF86BE25BC44E700D4A280 /* UIViewController+Embed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86BD25BC44E700D4A280 /* UIViewController+Embed.swift */; };
+		3DBF86C425BC465500D4A280 /* RocketsLoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86C325BC465500D4A280 /* RocketsLoaderViewController.swift */; };
+		3DBF86C825BC491400D4A280 /* RocketsErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86C725BC491400D4A280 /* RocketsErrorViewController.swift */; };
+		3DBF86D225BC514200D4A280 /* RocketsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86D125BC514200D4A280 /* RocketsTableViewController.swift */; };
+		3DBF86E325BC5C3900D4A280 /* UITableViewCell+Rockets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86E225BC5C3900D4A280 /* UITableViewCell+Rockets.swift */; };
+		3DBF86E825BC5DAE00D4A280 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86E725BC5DAE00D4A280 /* Reusable.swift */; };
+		3DBF86F625BC5F3C00D4A280 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86F525BC5F3C00D4A280 /* UITableView+Reusable.swift */; };
+		3DBF86FA25BC5FD700D4A280 /* RocetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF86F925BC5FD700D4A280 /* RocetsTableViewCell.swift */; };
+		3DBF870325BC68A400D4A280 /* RocketsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF870225BC68A400D4A280 /* RocketsRepository.swift */; };
+		3DBF870D25BC69F800D4A280 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF870C25BC69F800D4A280 /* Cancellable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +57,23 @@
 		3DBF863D25BC1ED400D4A280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DBF866925BC206A00D4A280 /* AppDelegateCommandBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateCommandBuilder.swift; sourceTree = "<group>"; };
 		3DBF867425BC230100D4A280 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
-		3DBF867C25BC23CA00D4A280 /* AppFlowContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowContainer.swift; sourceTree = "<group>"; };
+		3DBF867C25BC23CA00D4A280 /* AppFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowFactory.swift; sourceTree = "<group>"; };
+		3DBF868925BC280300D4A280 /* RocketsFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsFlowFactory.swift; sourceTree = "<group>"; };
+		3DBF869425BC29DF00D4A280 /* RocketsFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsFlowCoordinator.swift; sourceTree = "<group>"; };
+		3DBF86A225BC2BC400D4A280 /* RocketsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListViewModel.swift; sourceTree = "<group>"; };
+		3DBF86AA25BC2C4300D4A280 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		3DBF86AE25BC2D0A00D4A280 /* RocketsListItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsListItemViewModel.swift; sourceTree = "<group>"; };
+		3DBF86B225BC395F00D4A280 /* RocketsContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsContainerViewController.swift; sourceTree = "<group>"; };
+		3DBF86BD25BC44E700D4A280 /* UIViewController+Embed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embed.swift"; sourceTree = "<group>"; };
+		3DBF86C325BC465500D4A280 /* RocketsLoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsLoaderViewController.swift; sourceTree = "<group>"; };
+		3DBF86C725BC491400D4A280 /* RocketsErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsErrorViewController.swift; sourceTree = "<group>"; };
+		3DBF86D125BC514200D4A280 /* RocketsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsTableViewController.swift; sourceTree = "<group>"; };
+		3DBF86E225BC5C3900D4A280 /* UITableViewCell+Rockets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Rockets.swift"; sourceTree = "<group>"; };
+		3DBF86E725BC5DAE00D4A280 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		3DBF86F525BC5F3C00D4A280 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		3DBF86F925BC5FD700D4A280 /* RocetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocetsTableViewCell.swift; sourceTree = "<group>"; };
+		3DBF870225BC68A400D4A280 /* RocketsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsRepository.swift; sourceTree = "<group>"; };
+		3DBF870C25BC69F800D4A280 /* Cancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				3DBF865A25BC1F8700D4A280 /* Application */,
+				3DBF870B25BC69EE00D4A280 /* Common */,
+				3DBF86A825BC2C2600D4A280 /* Domain */,
+				3DBF868F25BC295E00D4A280 /* Presentation */,
 				3DBF865F25BC1FB100D4A280 /* Resources */,
 			);
 			path = SpaceX;
@@ -121,7 +156,8 @@
 		3DBF865E25BC1F9800D4A280 /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				3DBF867C25BC23CA00D4A280 /* AppFlowContainer.swift */,
+				3DBF867C25BC23CA00D4A280 /* AppFlowFactory.swift */,
+				3DBF868925BC280300D4A280 /* RocketsFlowFactory.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -135,6 +171,154 @@
 				3DBF862C25BC1ED400D4A280 /* Preview Content */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3DBF868F25BC295E00D4A280 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF86BC25BC44D600D4A280 /* Extensions */,
+				3DBF869025BC296B00D4A280 /* Rockets */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3DBF869025BC296B00D4A280 /* Rockets */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF869325BC29AB00D4A280 /* Flows */,
+				3DBF869C25BC2A6600D4A280 /* List */,
+				3DBF869D25BC2A7A00D4A280 /* Details */,
+			);
+			path = Rockets;
+			sourceTree = "<group>";
+		};
+		3DBF869325BC29AB00D4A280 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF869425BC29DF00D4A280 /* RocketsFlowCoordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		3DBF869C25BC2A6600D4A280 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF869F25BC2B0D00D4A280 /* View */,
+				3DBF869E25BC2B0600D4A280 /* ViewModel */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		3DBF869D25BC2A7A00D4A280 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF86A125BC2B2800D4A280 /* View */,
+				3DBF86A025BC2B2000D4A280 /* ViewModel */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		3DBF869E25BC2B0600D4A280 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF86A225BC2BC400D4A280 /* RocketsListViewModel.swift */,
+				3DBF86AE25BC2D0A00D4A280 /* RocketsListItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DBF869F25BC2B0D00D4A280 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF86F925BC5FD700D4A280 /* RocetsTableViewCell.swift */,
+				3DBF86B225BC395F00D4A280 /* RocketsContainerViewController.swift */,
+				3DBF86C725BC491400D4A280 /* RocketsErrorViewController.swift */,
+				3DBF86C325BC465500D4A280 /* RocketsLoaderViewController.swift */,
+				3DBF86D125BC514200D4A280 /* RocketsTableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DBF86A025BC2B2000D4A280 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DBF86A125BC2B2800D4A280 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3DBF86A825BC2C2600D4A280 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF86A925BC2C3C00D4A280 /* Entities */,
+				3DBF870025BC688300D4A280 /* Interfaces */,
+				3DBF870825BC692700D4A280 /* Operations */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3DBF86A925BC2C3C00D4A280 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF86AA25BC2C4300D4A280 /* Rocket.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3DBF86BC25BC44D600D4A280 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF86E625BC5DA700D4A280 /* Reusable */,
+				3DBF86E225BC5C3900D4A280 /* UITableViewCell+Rockets.swift */,
+				3DBF86BD25BC44E700D4A280 /* UIViewController+Embed.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3DBF86E625BC5DA700D4A280 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF86E725BC5DAE00D4A280 /* Reusable.swift */,
+				3DBF86F525BC5F3C00D4A280 /* UITableView+Reusable.swift */,
+			);
+			path = Reusable;
+			sourceTree = "<group>";
+		};
+		3DBF870025BC688300D4A280 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF870125BC688C00D4A280 /* Repositories */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		3DBF870125BC688C00D4A280 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF870225BC68A400D4A280 /* RocketsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3DBF870825BC692700D4A280 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		3DBF870B25BC69EE00D4A280 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF870C25BC69F800D4A280 /* Cancellable.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,11 +421,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DBF867D25BC23CA00D4A280 /* AppFlowContainer.swift in Sources */,
+				3DBF870D25BC69F800D4A280 /* Cancellable.swift in Sources */,
+				3DBF86E825BC5DAE00D4A280 /* Reusable.swift in Sources */,
+				3DBF86BE25BC44E700D4A280 /* UIViewController+Embed.swift in Sources */,
+				3DBF86AB25BC2C4300D4A280 /* Rocket.swift in Sources */,
+				3DBF86C825BC491400D4A280 /* RocketsErrorViewController.swift in Sources */,
+				3DBF86F625BC5F3C00D4A280 /* UITableView+Reusable.swift in Sources */,
+				3DBF86A325BC2BC400D4A280 /* RocketsListViewModel.swift in Sources */,
+				3DBF86FA25BC5FD700D4A280 /* RocetsTableViewCell.swift in Sources */,
+				3DBF869525BC29DF00D4A280 /* RocketsFlowCoordinator.swift in Sources */,
+				3DBF86B325BC395F00D4A280 /* RocketsContainerViewController.swift in Sources */,
+				3DBF868A25BC280300D4A280 /* RocketsFlowFactory.swift in Sources */,
+				3DBF867D25BC23CA00D4A280 /* AppFlowFactory.swift in Sources */,
+				3DBF86C425BC465500D4A280 /* RocketsLoaderViewController.swift in Sources */,
+				3DBF86D225BC514200D4A280 /* RocketsTableViewController.swift in Sources */,
+				3DBF870325BC68A400D4A280 /* RocketsRepository.swift in Sources */,
+				3DBF86AF25BC2D0A00D4A280 /* RocketsListItemViewModel.swift in Sources */,
 				3DBF867525BC230100D4A280 /* AppFlowCoordinator.swift in Sources */,
 				3DBF866A25BC206A00D4A280 /* AppDelegateCommandBuilder.swift in Sources */,
 				3DBF862525BC1ED300D4A280 /* AppDelegate.swift in Sources */,
 				3DBF862725BC1ED300D4A280 /* AppSceneDelegate.swift in Sources */,
+				3DBF86E325BC5C3900D4A280 /* UITableViewCell+Rockets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
