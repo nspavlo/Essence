@@ -13,7 +13,6 @@
 		3DBF862E25BC1ED400D4A280 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBF862D25BC1ED400D4A280 /* Preview Assets.xcassets */; };
 		3DBF863125BC1ED400D4A280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBF862F25BC1ED400D4A280 /* LaunchScreen.storyboard */; };
 		3DBF863C25BC1ED400D4A280 /* SpaceXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF863B25BC1ED400D4A280 /* SpaceXTests.swift */; };
-		3DBF866A25BC206A00D4A280 /* AppDelegateCommandBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF866925BC206A00D4A280 /* AppDelegateCommandBuilder.swift */; };
 		3DBF867525BC230100D4A280 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF867425BC230100D4A280 /* AppFlowCoordinator.swift */; };
 		3DBF867D25BC23CA00D4A280 /* AppFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF867C25BC23CA00D4A280 /* AppFlowFactory.swift */; };
 		3DBF868A25BC280300D4A280 /* RocketsFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF868925BC280300D4A280 /* RocketsFlowFactory.swift */; };
@@ -62,7 +61,6 @@
 		3DBF863725BC1ED400D4A280 /* SpaceXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DBF863B25BC1ED400D4A280 /* SpaceXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXTests.swift; sourceTree = "<group>"; };
 		3DBF863D25BC1ED400D4A280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DBF866925BC206A00D4A280 /* AppDelegateCommandBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegateCommandBuilder.swift; sourceTree = "<group>"; };
 		3DBF867425BC230100D4A280 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		3DBF867C25BC23CA00D4A280 /* AppFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowFactory.swift; sourceTree = "<group>"; };
 		3DBF868925BC280300D4A280 /* RocketsFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsFlowFactory.swift; sourceTree = "<group>"; };
@@ -160,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				3DBF862425BC1ED300D4A280 /* AppDelegate.swift */,
-				3DBF866925BC206A00D4A280 /* AppDelegateCommandBuilder.swift */,
 				3DBF867425BC230100D4A280 /* AppFlowCoordinator.swift */,
 				3DBF862625BC1ED300D4A280 /* AppSceneDelegate.swift */,
 				3DBF865E25BC1F9800D4A280 /* DI */,
@@ -495,7 +492,6 @@
 				3DBF86AF25BC2D0A00D4A280 /* RocketsListItemViewModel.swift in Sources */,
 				3DBF873B25BD85C700D4A280 /* AFRequestDispatcher.swift in Sources */,
 				3DBF867525BC230100D4A280 /* AppFlowCoordinator.swift in Sources */,
-				3DBF866A25BC206A00D4A280 /* AppDelegateCommandBuilder.swift in Sources */,
 				3DBF862525BC1ED300D4A280 /* AppDelegate.swift in Sources */,
 				3DBF862725BC1ED300D4A280 /* AppSceneDelegate.swift in Sources */,
 			);
