@@ -17,7 +17,7 @@ class AppDelegate: NSObject {}
 extension AppDelegate: UIApplicationDelegate {
     func application(
         _: UIApplication,
-        didFinishLaunchingWithOptions options: [UIApplication.LaunchOptionsKey: Any]?
+        didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         return true
     }

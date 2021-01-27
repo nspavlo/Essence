@@ -38,6 +38,8 @@
 		3DBF874625BD897D00D4A280 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF874525BD897D00D4A280 /* AnyEncodable.swift */; };
 		3DBF874A25BD8ED500D4A280 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF874925BD8ED500D4A280 /* Endpoint.swift */; };
 		3DBF874E25BD8F2D00D4A280 /* Request+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF874D25BD8F2D00D4A280 /* Request+Endpoint.swift */; };
+		3DBF89F825C1EC2A00D4A280 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF89F725C1EC2A00D4A280 /* Router.swift */; };
+		3DBF89FC25C1EC4B00D4A280 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF89FB25C1EC4B00D4A280 /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,8 @@
 		3DBF874525BD897D00D4A280 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
 		3DBF874925BD8ED500D4A280 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		3DBF874D25BD8F2D00D4A280 /* Request+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Endpoint.swift"; sourceTree = "<group>"; };
+		3DBF89F725C1EC2A00D4A280 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		3DBF89FB25C1EC4B00D4A280 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +324,8 @@
 			children = (
 				3DBF874525BD897D00D4A280 /* AnyEncodable.swift */,
 				3DBF870C25BC69F800D4A280 /* Cancellable.swift */,
+				3DBF89FB25C1EC4B00D4A280 /* Coordinator.swift */,
+				3DBF89F725C1EC2A00D4A280 /* Router.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 				3DBF86E825BC5DAE00D4A280 /* Reusable.swift in Sources */,
 				3DBF874A25BD8ED500D4A280 /* Endpoint.swift in Sources */,
 				3DBF86BE25BC44E700D4A280 /* UIViewController+Embed.swift in Sources */,
+				3DBF89F825C1EC2A00D4A280 /* Router.swift in Sources */,
 				3DBF874E25BD8F2D00D4A280 /* Request+Endpoint.swift in Sources */,
 				3DBF86AB25BC2C4300D4A280 /* Rocket.swift in Sources */,
 				3DBF86C825BC491400D4A280 /* ErrorViewController.swift in Sources */,
@@ -495,6 +502,7 @@
 				3DBF868A25BC280300D4A280 /* RocketsFlowFactory.swift in Sources */,
 				3DBF867D25BC23CA00D4A280 /* AppFlowFactory.swift in Sources */,
 				3DBF86C425BC465500D4A280 /* LoaderViewController.swift in Sources */,
+				3DBF89FC25C1EC4B00D4A280 /* Coordinator.swift in Sources */,
 				3DBF86D225BC514200D4A280 /* RocketsTableViewController.swift in Sources */,
 				3DBF870325BC68A400D4A280 /* RocketsRepository.swift in Sources */,
 				3DBF86AF25BC2D0A00D4A280 /* RocketsListItemViewModel.swift in Sources */,

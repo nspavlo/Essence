@@ -7,12 +7,6 @@
 
 import UIKit
 
-// MARK: Protocol
-
-protocol Router: AnyObject {
-    func push(_ viewController: UIViewController, animated: Bool)
-}
-
 // MARK: Initialization
 
 final class NavigationRouter {
@@ -27,14 +21,8 @@ final class NavigationRouter {
 
 extension NavigationRouter: Router {
     func push(_ viewController: UIViewController, animated: Bool) {
-        navigationController.pushViewController(viewController, animated: true)
+        navigationController.pushViewController(viewController, animated: animated)
     }
-}
-
-// MARK: Protocol
-
-protocol Coordinator {
-    func start()
 }
 
 // MARK: -
