@@ -7,6 +7,14 @@
 
 import Foundation
 
+// MARK: Protocol
+
 protocol Cancellable {
     func cancel()
+}
+
+// MARK: Dummy Implementation
+
+struct DummyCancellable: Cancellable {
+    func cancel() {}
 }

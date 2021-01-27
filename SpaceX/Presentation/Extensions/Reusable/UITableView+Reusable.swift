@@ -24,7 +24,7 @@ extension UITableView {
             fatalError(
                 "Failed to dequeue a cell with identifier \(cellType.reuseIdentifier) "
                     + "matching type \(cellType.self). "
-                    + "Check that you registered the cell beforehand"
+                    + "Check that you registered the cell beforehand."
             )
         }
 

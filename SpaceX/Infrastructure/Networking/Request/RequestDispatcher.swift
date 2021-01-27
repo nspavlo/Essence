@@ -10,5 +10,9 @@ import Foundation
 // MARK: Protocol
 
 protocol RequestDispatcher: AnyObject {
-    func execute<T: Decodable>(_ request: Request, completion: @escaping (Result<T, Error>) -> Void)
+    @discardableResult
+    func execute<T: Decodable>(
+        _ request: Request,
+        completion: @escaping (Result<T, Error>) -> Void
+    ) -> Cancellable
 }

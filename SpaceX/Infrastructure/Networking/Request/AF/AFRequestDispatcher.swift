@@ -20,7 +20,10 @@ final class AFRequestDispatcher {
 // MARK: RequestDispatcher
 
 extension AFRequestDispatcher: RequestDispatcher {
-    func execute<T>(_ request: Request, completion: @escaping (Result<T, Error>) -> Void) where T: Decodable {
+    func execute<T>(
+        _ request: Request,
+        completion: @escaping (Result<T, Error>) -> Void
+    ) -> Cancellable where T: Decodable {
         AF
         .request(
             environment.path + request.path,
@@ -30,5 +33,7 @@ extension AFRequestDispatcher: RequestDispatcher {
             let result = response.result.mapError { $0 as Error }
             completion(result)
         }
+
+        return DummyCancellable()
     }
 }
