@@ -22,7 +22,7 @@ final class AFRequestDispatcher {
 extension AFRequestDispatcher: RequestDispatcher {
     func execute<T>(
         _ request: Request,
-        completion: @escaping (Result<T, Error>) -> Void
+        completion: @escaping (Result<T, RequestError>) -> Void
     ) -> Cancellable where T: Decodable {
         AF
         .request(
@@ -30,7 +30,7 @@ extension AFRequestDispatcher: RequestDispatcher {
             method: HTTPMethod(rawValue: request.method.rawValue)
         )
         .responseDecodable(of: T.self) { response in
-            let result = response.result.mapError { $0 as Error }
+            let result = response.result.mapError { RequestError.underlying($0 as Error) }
             completion(result)
         }
 

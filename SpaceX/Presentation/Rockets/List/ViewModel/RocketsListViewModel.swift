@@ -86,7 +86,7 @@ final class RemoteRocketsRepository {
 // MARK: RocketsRepository
 
 extension RemoteRocketsRepository: RocketsRepository {
-    func fetch(with completion: @escaping (Result<Rockets, Error>) -> Void) -> Cancellable {
+    func fetch(with completion: @escaping (Result<Rockets, RequestError>) -> Void) -> Cancellable {
         let request = Request(method: .get, endpoint: .rockets, params: nil)
         return dispatcher.execute(request, completion: completion)
     }
