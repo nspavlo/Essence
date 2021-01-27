@@ -10,8 +10,12 @@ import Foundation
 // MARK: Initialization
 
 enum Environment: String {
+    var version: String {
+        "v4"
+    }
+
     var path: String {
-        "https://\(self.rawValue)/v4"
+        "https://\(rawValue)/\(version)"
     }
 
     case development = "api.spacexdata.com"

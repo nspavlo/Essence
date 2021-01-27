@@ -44,7 +44,7 @@ final class AppFlowCoordinator {
 extension AppFlowCoordinator: Coordinator {
     func start() {
         let rocketsFlowFactory = appFlowFactory.createRocketsFlowFactory()
-        let coordinator = rocketsFlowFactory.createRocketsFlowCoordinator(with: router)
-        coordinator.start()
+        let rocketsFlowCoordinator = rocketsFlowFactory.createRocketsFlowCoordinator(with: router)
+        rocketsFlowCoordinator.start()
     }
 }

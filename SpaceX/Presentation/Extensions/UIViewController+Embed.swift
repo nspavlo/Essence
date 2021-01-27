@@ -7,6 +7,8 @@
 
 import UIKit
 
+// MARK: Embed
+
 extension UIViewController {
     func embed(_ child: UIViewController, in container: UIView) {
         addChild(child)
