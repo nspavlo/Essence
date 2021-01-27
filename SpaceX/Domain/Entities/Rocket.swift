@@ -12,7 +12,9 @@ typealias Rockets = [Rocket]
 // MARK: Initialization
 
 struct Rocket {
-    let id: String
+    typealias Identifier = String
+
+    let id: Identifier
     let name: String
     let description: String
 }

@@ -12,7 +12,6 @@
 		3DBF862B25BC1ED400D4A280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBF862A25BC1ED400D4A280 /* Assets.xcassets */; };
 		3DBF862E25BC1ED400D4A280 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DBF862D25BC1ED400D4A280 /* Preview Assets.xcassets */; };
 		3DBF863125BC1ED400D4A280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBF862F25BC1ED400D4A280 /* LaunchScreen.storyboard */; };
-		3DBF863C25BC1ED400D4A280 /* SpaceXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF863B25BC1ED400D4A280 /* SpaceXTests.swift */; };
 		3DBF867525BC230100D4A280 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF867425BC230100D4A280 /* AppFlowCoordinator.swift */; };
 		3DBF867D25BC23CA00D4A280 /* AppFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF867C25BC23CA00D4A280 /* AppFlowFactory.swift */; };
 		3DBF868A25BC280300D4A280 /* RocketsFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF868925BC280300D4A280 /* RocketsFlowFactory.swift */; };
@@ -40,6 +39,7 @@
 		3DBF874E25BD8F2D00D4A280 /* Request+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF874D25BD8F2D00D4A280 /* Request+Endpoint.swift */; };
 		3DBF89F825C1EC2A00D4A280 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF89F725C1EC2A00D4A280 /* Router.swift */; };
 		3DBF89FC25C1EC4B00D4A280 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF89FB25C1EC4B00D4A280 /* Coordinator.swift */; };
+		3DBF8A0525C1EFA500D4A280 /* Rocket+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A0425C1EFA500D4A280 /* Rocket+Stub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +61,6 @@
 		3DBF863025BC1ED400D4A280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DBF863225BC1ED400D4A280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DBF863725BC1ED400D4A280 /* SpaceXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DBF863B25BC1ED400D4A280 /* SpaceXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXTests.swift; sourceTree = "<group>"; };
 		3DBF863D25BC1ED400D4A280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DBF867425BC230100D4A280 /* AppFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowCoordinator.swift; sourceTree = "<group>"; };
 		3DBF867C25BC23CA00D4A280 /* AppFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowFactory.swift; sourceTree = "<group>"; };
@@ -89,6 +88,7 @@
 		3DBF874D25BD8F2D00D4A280 /* Request+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Endpoint.swift"; sourceTree = "<group>"; };
 		3DBF89F725C1EC2A00D4A280 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		3DBF89FB25C1EC4B00D4A280 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3DBF8A0425C1EFA500D4A280 /* Rocket+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+Stub.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +152,7 @@
 		3DBF863A25BC1ED400D4A280 /* SpaceXTests */ = {
 			isa = PBXGroup;
 			children = (
-				3DBF863B25BC1ED400D4A280 /* SpaceXTests.swift */,
+				3DBF8A0125C1EF2700D4A280 /* Mocks */,
 				3DBF863D25BC1ED400D4A280 /* Info.plist */,
 			);
 			path = SpaceXTests;
@@ -376,6 +376,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		3DBF8A0125C1EF2700D4A280 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF8A0425C1EFA500D4A280 /* Rocket+Stub.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -431,6 +439,7 @@
 					};
 					3DBF863625BC1ED400D4A280 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 						TestTargetID = 3DBF862025BC1ED300D4A280;
 					};
 				};
@@ -517,7 +526,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DBF863C25BC1ED400D4A280 /* SpaceXTests.swift in Sources */,
+				3DBF8A0525C1EFA500D4A280 /* Rocket+Stub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +715,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JPE45M57J4;
 				INFOPLIST_FILE = SpaceXTests/Info.plist;
@@ -717,6 +727,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.nspavlo.SpaceXTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceX.app/SpaceX";
@@ -728,6 +739,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JPE45M57J4;
 				INFOPLIST_FILE = SpaceXTests/Info.plist;
