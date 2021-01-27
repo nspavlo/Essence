@@ -20,5 +20,6 @@ extension RocketsTableViewCell: Reusable {}
 extension RocketsTableViewCell {
     func configure(with viewModel: RocketsListItemViewModel) {
         textLabel?.text = viewModel.title
+        accessoryType = .disclosureIndicator
     }
 }
