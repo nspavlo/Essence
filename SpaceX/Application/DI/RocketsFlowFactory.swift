@@ -28,7 +28,7 @@ extension RocketsFlowFactory {
 // MARK: Coordinators
 
 extension RocketsFlowFactory {
-    func createRocketsFlowCoordinator(with navigationController: UINavigationController) -> Coordinator {
-        RocketsFlowCoordinator(navigationController: navigationController, rocketsFlowFactory: self)
+    func createRocketsFlowCoordinator(with router: Router) -> Coordinator {
+        RocketsFlowCoordinator(router: router, rocketsFlowFactory: self)
     }
 }

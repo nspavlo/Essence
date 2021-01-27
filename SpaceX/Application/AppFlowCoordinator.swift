@@ -9,6 +9,30 @@ import UIKit
 
 // MARK: Protocol
 
+protocol Router: AnyObject {
+    func push(_ viewController: UIViewController, animated: Bool)
+}
+
+// MARK: Initialization
+
+final class NavigationRouter {
+    private let navigationController: UINavigationController
+
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+}
+
+// MARK: Router
+
+extension NavigationRouter: Router {
+    func push(_ viewController: UIViewController, animated: Bool) {
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+// MARK: Protocol
+
 protocol Coordinator {
     func start()
 }
@@ -18,11 +42,11 @@ protocol Coordinator {
 // MARK: Initialization
 
 final class AppFlowCoordinator {
-    private let navigationController: UINavigationController
+    private let router: Router
     private let appFlowFactory: AppFlowFactory
 
-    init(navigationController: UINavigationController, appFlowFactory: AppFlowFactory) {
-        self.navigationController = navigationController
+    init(router: Router, appFlowFactory: AppFlowFactory) {
+        self.router = router
         self.appFlowFactory = appFlowFactory
     }
 }
@@ -32,7 +56,7 @@ final class AppFlowCoordinator {
 extension AppFlowCoordinator: Coordinator {
     func start() {
         let rocketsFlowFactory = appFlowFactory.createRocketsFlowFactory()
-        let coordinator = rocketsFlowFactory.createRocketsFlowCoordinator(with: navigationController)
+        let coordinator = rocketsFlowFactory.createRocketsFlowCoordinator(with: router)
         coordinator.start()
     }
 }
