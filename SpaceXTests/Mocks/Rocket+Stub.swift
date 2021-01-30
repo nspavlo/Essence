@@ -7,7 +7,7 @@
 
 @testable import SpaceX
 
-// MARK -
+// MARK: -
 
 extension Rocket {
     static func stub(
