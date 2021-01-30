@@ -41,6 +41,7 @@
 		3DBF8A0525C1EFA500D4A280 /* Rocket+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A0425C1EFA500D4A280 /* Rocket+Stub.swift */; };
 		3DBF8A1B25C55E8500D4A280 /* RemoteRocketsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A1A25C55E8500D4A280 /* RemoteRocketsRepository.swift */; };
 		3DBF8A2225C5624300D4A280 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A2125C5624300D4A280 /* NavigationRouter.swift */; };
+		3DBF8A4725C5754300D4A280 /* RocketsContainerViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A4625C5754300D4A280 /* RocketsContainerViewControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		3DBF8A0425C1EFA500D4A280 /* Rocket+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+Stub.swift"; sourceTree = "<group>"; };
 		3DBF8A1A25C55E8500D4A280 /* RemoteRocketsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRocketsRepository.swift; sourceTree = "<group>"; };
 		3DBF8A2125C5624300D4A280 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		3DBF8A4625C5754300D4A280 /* RocketsContainerViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsContainerViewControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				3DBF8A0125C1EF2700D4A280 /* Mocks */,
+				3DBF8A4225C5750300D4A280 /* Presentation */,
 				3DBF863D25BC1ED400D4A280 /* Info.plist */,
 			);
 			path = SpaceXTests;
@@ -411,6 +414,22 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		3DBF8A4225C5750300D4A280 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF8A4325C5751200D4A280 /* Rockets */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3DBF8A4325C5751200D4A280 /* Rockets */ = {
+			isa = PBXGroup;
+			children = (
+				3DBF8A4625C5754300D4A280 /* RocketsContainerViewControllerTest.swift */,
+			);
+			path = Rockets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -556,6 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DBF8A4725C5754300D4A280 /* RocketsContainerViewControllerTest.swift in Sources */,
 				3DBF8A0525C1EFA500D4A280 /* Rocket+Stub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
