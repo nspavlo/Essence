@@ -22,5 +22,5 @@ protocol RequestDispatcher: AnyObject {
     func execute<T: Decodable>(
         _ request: Request,
         completion: @escaping (Result<T, RequestError>) -> Void
-    ) -> Cancellable
+    ) -> Cancellable?
 }

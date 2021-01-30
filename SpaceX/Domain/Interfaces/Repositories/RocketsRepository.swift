@@ -11,5 +11,5 @@ import Foundation
 
 protocol RocketsRepository {
     @discardableResult
-    func fetch(with completion: @escaping (Result<Rockets, RequestError>) -> Void) -> Cancellable
+    func fetch(with completion: @escaping (Result<Rockets, RequestError>) -> Void) -> Cancellable?
 }

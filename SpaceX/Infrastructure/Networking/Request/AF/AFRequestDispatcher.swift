@@ -23,7 +23,7 @@ extension AFRequestDispatcher: RequestDispatcher {
     func execute<T>(
         _ request: Request,
         completion: @escaping (Result<T, RequestError>) -> Void
-    ) -> Cancellable where T: Decodable {
+    ) -> Cancellable? where T: Decodable {
         AF
         .request(
             environment.path + request.path,
@@ -34,6 +34,6 @@ extension AFRequestDispatcher: RequestDispatcher {
             completion(result)
         }
 
-        return DummyCancellable()
+        return nil
     }
 }

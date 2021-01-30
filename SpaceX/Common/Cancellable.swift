@@ -12,9 +12,3 @@ import Foundation
 protocol Cancellable {
     func cancel()
 }
-
-// MARK: Dummy Implementation
-
-struct DummyCancellable: Cancellable {
-    func cancel() {}
-}
