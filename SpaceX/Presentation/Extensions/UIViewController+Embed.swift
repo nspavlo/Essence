@@ -28,13 +28,7 @@ extension UIViewController {
     }
 
     func replaceExisting(with child: UIViewController, in container: UIView) {
-        removeAllEmbedded()
+        children.forEach { $0.remove() }
         embed(child, in: container)
-    }
-
-    func removeAllEmbedded() {
-        for child in children {
-            child.remove()
-        }
     }
 }

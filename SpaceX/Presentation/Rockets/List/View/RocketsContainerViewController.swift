@@ -39,7 +39,7 @@ private extension RocketsContainerViewController {
     }
 
     func setupUI() {
-        title = Locale.navigationBarTitle
+        title = Locale.title
     }
 
     func setupBindings() {
@@ -51,16 +51,32 @@ private extension RocketsContainerViewController {
     func render(_ state: RocketsListViewModelState) {
         switch state {
         case .loading:
-            let viewController = LoaderViewController()
-            replaceExisting(with: viewController, in: view)
+            showLoaderView()
         case .result(.success(let items)):
-            let viewController = RocketsTableViewController(items: items)
-            viewController.didSelectItem = viewModel.didSelectItem(at:)
-            replaceExisting(with: viewController, in: view)
+            showList(with: items)
         case .result(.failure(let error)):
-            let viewController = ErrorViewController(error: error)
-            replaceExisting(with: viewController, in: view)
+            showErrorView(with: error)
         }
+    }
+}
+
+// MARK: Views
+
+private extension RocketsContainerViewController {
+    func showLoaderView() {
+        let viewController = LoaderViewController()
+        replaceExisting(with: viewController, in: view)
+    }
+
+    func showList(with items: RocketsListItemViewModels) {
+        let viewController = RocketsTableViewController(items: items)
+        viewController.didSelectItem = viewModel.didSelectItem(at:)
+        replaceExisting(with: viewController, in: view)
+    }
+
+    func showErrorView(with error: Error) {
+        let viewController = ErrorViewController(error: error)
+        replaceExisting(with: viewController, in: view)
     }
 }
 
@@ -69,5 +85,5 @@ private extension RocketsContainerViewController {
 private typealias Locale = String
 
 private extension Locale {
-    static let navigationBarTitle = "SpaceX"
+    static let title = "SpaceX"
 }
