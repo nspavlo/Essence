@@ -43,6 +43,7 @@
 		3DBF8A2225C5624300D4A280 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A2125C5624300D4A280 /* NavigationRouter.swift */; };
 		3DBF8A2B25C56A2900D4A280 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 3DBF8A2A25C56A2900D4A280 /* Nimble */; };
 		3DBF8A3025C56A4A00D4A280 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 3DBF8A2F25C56A4A00D4A280 /* Quick */; };
+		3DBF8A3425C56C4A00D4A280 /* SpecTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A3325C56C4A00D4A280 /* SpecTemplate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		3DBF8A0425C1EFA500D4A280 /* Rocket+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rocket+Stub.swift"; sourceTree = "<group>"; };
 		3DBF8A1A25C55E8500D4A280 /* RemoteRocketsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRocketsRepository.swift; sourceTree = "<group>"; };
 		3DBF8A2125C5624300D4A280 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
+		3DBF8A3325C56C4A00D4A280 /* SpecTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecTemplate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				3DBF8A0125C1EF2700D4A280 /* Mocks */,
+				3DBF8A3325C56C4A00D4A280 /* SpecTemplate.swift */,
 				3DBF863D25BC1ED400D4A280 /* Info.plist */,
 			);
 			path = SpaceXTests;
@@ -557,6 +560,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DBF8A0525C1EFA500D4A280 /* Rocket+Stub.swift in Sources */,
+				3DBF8A3425C56C4A00D4A280 /* SpecTemplate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
