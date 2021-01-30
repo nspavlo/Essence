@@ -9,26 +9,6 @@ import UIKit
 
 // MARK: Initialization
 
-final class NavigationRouter {
-    private let navigationController: UINavigationController
-
-    init(navigationController: UINavigationController) {
-        self.navigationController = navigationController
-    }
-}
-
-// MARK: Router
-
-extension NavigationRouter: Router {
-    func push(_ viewController: UIViewController, animated: Bool) {
-        navigationController.pushViewController(viewController, animated: animated)
-    }
-}
-
-// MARK: -
-
-// MARK: Initialization
-
 final class AppFlowCoordinator {
     private let router: Router
     private let appFlowFactory: AppFlowFactory
