@@ -41,6 +41,8 @@
 		3DBF8A0525C1EFA500D4A280 /* Rocket+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A0425C1EFA500D4A280 /* Rocket+Stub.swift */; };
 		3DBF8A1B25C55E8500D4A280 /* RemoteRocketsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A1A25C55E8500D4A280 /* RemoteRocketsRepository.swift */; };
 		3DBF8A2225C5624300D4A280 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A2125C5624300D4A280 /* NavigationRouter.swift */; };
+		3DBF8A2B25C56A2900D4A280 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 3DBF8A2A25C56A2900D4A280 /* Nimble */; };
+		3DBF8A3025C56A4A00D4A280 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 3DBF8A2F25C56A4A00D4A280 /* Quick */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DBF8A3025C56A4A00D4A280 /* Quick in Frameworks */,
+				3DBF8A2B25C56A2900D4A280 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +444,10 @@
 				3DBF863925BC1ED400D4A280 /* PBXTargetDependency */,
 			);
 			name = SpaceXTests;
+			packageProductDependencies = (
+				3DBF8A2A25C56A2900D4A280 /* Nimble */,
+				3DBF8A2F25C56A4A00D4A280 /* Quick */,
+			);
 			productName = SpaceXTests;
 			productReference = 3DBF863725BC1ED400D4A280 /* SpaceXTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -474,6 +482,8 @@
 			mainGroup = 3DBF861825BC1ED300D4A280;
 			packageReferences = (
 				3DBF873425BD85A000D4A280 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3DBF8A2925C56A2900D4A280 /* XCRemoteSwiftPackageReference "Nimble" */,
+				3DBF8A2E25C56A4A00D4A280 /* XCRemoteSwiftPackageReference "Quick" */,
 			);
 			productRefGroup = 3DBF862225BC1ED300D4A280 /* Products */;
 			projectDirPath = "";
@@ -816,6 +826,22 @@
 				minimumVersion = 5.4.1;
 			};
 		};
+		3DBF8A2925C56A2900D4A280 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		3DBF8A2E25C56A4A00D4A280 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -823,6 +849,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3DBF873425BD85A000D4A280 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		3DBF8A2A25C56A2900D4A280 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DBF8A2925C56A2900D4A280 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		3DBF8A2F25C56A4A00D4A280 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DBF8A2E25C56A4A00D4A280 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
