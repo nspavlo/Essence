@@ -30,7 +30,7 @@ final class RocketsTableViewController: UITableViewController {
     }
 }
 
-// MARK: UITableViewDataSource, UITableViewDelegate
+// MARK: UITableViewDataSource
 
 extension RocketsTableViewController {
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
@@ -42,7 +42,11 @@ extension RocketsTableViewController {
         cell.configure(with: items[indexPath.row])
         return cell
     }
+}
 
+// MARK: UITableViewDelegate
+
+extension RocketsTableViewController {
     override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         didSelectItem?(indexPath)
     }
