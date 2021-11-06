@@ -11,8 +11,8 @@ import XCTest
 
 // MARK: Test
 
-class RocketsContainerViewControllerTest: XCTestCase {
-    func testViewDidLoadBinding() throws {
+final class RocketsContainerViewControllerTest: XCTestCase {
+    func testViewModelBindingOnViewDidLoad() throws {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
         sut.viewDidLoad()
