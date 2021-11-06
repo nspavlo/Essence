@@ -33,7 +33,6 @@
 		3DBF872825BD7F1900D4A280 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF872725BD7F1900D4A280 /* Request.swift */; };
 		3DBF873625BD85A000D4A280 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3DBF873525BD85A000D4A280 /* Alamofire */; };
 		3DBF873B25BD85C700D4A280 /* AFRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF873A25BD85C700D4A280 /* AFRequestDispatcher.swift */; };
-		3DBF874625BD897D00D4A280 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF874525BD897D00D4A280 /* AnyEncodable.swift */; };
 		3DBF874A25BD8ED500D4A280 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF874925BD8ED500D4A280 /* Endpoint.swift */; };
 		3DBF874E25BD8F2D00D4A280 /* Request+Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF874D25BD8F2D00D4A280 /* Request+Endpoint.swift */; };
 		3DBF89F825C1EC2A00D4A280 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF89F725C1EC2A00D4A280 /* Router.swift */; };
@@ -84,7 +83,6 @@
 		3DBF872125BD7EE300D4A280 /* RequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestDispatcher.swift; sourceTree = "<group>"; };
 		3DBF872725BD7F1900D4A280 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		3DBF873A25BD85C700D4A280 /* AFRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFRequestDispatcher.swift; sourceTree = "<group>"; };
-		3DBF874525BD897D00D4A280 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
 		3DBF874925BD8ED500D4A280 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		3DBF874D25BD8F2D00D4A280 /* Request+Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request+Endpoint.swift"; sourceTree = "<group>"; };
 		3DBF89F725C1EC2A00D4A280 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 			children = (
 				3DBF869325BC29AB00D4A280 /* Flows */,
 				3DBF869C25BC2A6600D4A280 /* List */,
-				3DBF869D25BC2A7A00D4A280 /* Details */,
 			);
 			path = Rockets;
 			sourceTree = "<group>";
@@ -223,15 +220,6 @@
 			path = List;
 			sourceTree = "<group>";
 		};
-		3DBF869D25BC2A7A00D4A280 /* Details */ = {
-			isa = PBXGroup;
-			children = (
-				3DBF86A125BC2B2800D4A280 /* View */,
-				3DBF86A025BC2B2000D4A280 /* ViewModel */,
-			);
-			path = Details;
-			sourceTree = "<group>";
-		};
 		3DBF869E25BC2B0600D4A280 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,20 +235,6 @@
 				3DBF86F925BC5FD700D4A280 /* RocketsTableViewCell.swift */,
 				3DBF86B225BC395F00D4A280 /* RocketsContainerViewController.swift */,
 				3DBF86D125BC514200D4A280 /* RocketsTableViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		3DBF86A025BC2B2000D4A280 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		3DBF86A125BC2B2800D4A280 /* View */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -320,7 +294,6 @@
 			isa = PBXGroup;
 			children = (
 				3DBF8A2025C5622400D4A280 /* Navigation */,
-				3DBF874525BD897D00D4A280 /* AnyEncodable.swift */,
 				3DBF870C25BC69F800D4A280 /* Cancellable.swift */,
 			);
 			path = Common;
@@ -553,7 +526,6 @@
 				3DBF86FA25BC5FD700D4A280 /* RocketsTableViewCell.swift in Sources */,
 				3DBF869525BC29DF00D4A280 /* RocketsFlowCoordinator.swift in Sources */,
 				3DBF872225BD7EE300D4A280 /* RequestDispatcher.swift in Sources */,
-				3DBF874625BD897D00D4A280 /* AnyEncodable.swift in Sources */,
 				3DBF872825BD7F1900D4A280 /* Request.swift in Sources */,
 				3DBF86B325BC395F00D4A280 /* RocketsContainerViewController.swift in Sources */,
 				3DBF868A25BC280300D4A280 /* RocketsFlowFactory.swift in Sources */,
