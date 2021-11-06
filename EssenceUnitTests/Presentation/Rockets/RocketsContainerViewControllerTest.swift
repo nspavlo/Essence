@@ -25,6 +25,13 @@ final class RocketsContainerViewControllerTest: XCTestCase {
         sut.viewDidLoad()
         XCTAssertNotNil(viewModel.changeState)
     }
+
+    func testTitleSetupOnViewDidLoad() throws {
+        let viewModel = SpyRocketsListViewModel()
+        let sut = RocketsContainerViewController(viewModel: viewModel)
+        sut.viewDidLoad()
+        XCTAssertEqual(sut.title, "Essence")
+    }
 }
 
 // MARK: -
