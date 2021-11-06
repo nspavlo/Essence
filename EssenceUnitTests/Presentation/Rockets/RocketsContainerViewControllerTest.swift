@@ -18,6 +18,13 @@ final class RocketsContainerViewControllerTest: XCTestCase {
         sut.viewDidLoad()
         XCTAssertEqual(viewModel.viewDidLoadExecutionCount, 1)
     }
+
+    func testStateChangeBindingOnViewDidLoad() throws {
+        let viewModel = SpyRocketsListViewModel()
+        let sut = RocketsContainerViewController(viewModel: viewModel)
+        sut.viewDidLoad()
+        XCTAssertNotNil(viewModel.changeState)
+    }
 }
 
 // MARK: -
