@@ -33,7 +33,7 @@ typealias RocketsListViewModel = RocketsListViewModelInput & RocketsListViewMode
 
 // MARK: Initialization
 
-final class RocketsListController: RocketsListViewModel {
+final class RocketsListController: RocketsListViewModelOutput {
     var changeState: ((RocketsListViewModelState) -> Void)?
     var showRocketDetails: ((Rocket) -> Void)?
 
@@ -48,7 +48,7 @@ final class RocketsListController: RocketsListViewModel {
 
 // MARK: RocketsListViewModelInput
 
-extension RocketsListController {
+extension RocketsListController: RocketsListViewModelInput {
     func viewDidLoad() {
         changeState?(.loading)
 

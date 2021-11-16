@@ -18,6 +18,10 @@ final class AppFlowFactory {
 // MARK: -
 
 extension AppFlowFactory {
+    func createIndexFlowFactory() -> IndexFlowFactory {
+        IndexFlowFactory()
+    }
+    
     func createRocketsFlowFactory() -> RocketsFlowFactory {
         RocketsFlowFactory(dispatcher: dispatcher)
     }
