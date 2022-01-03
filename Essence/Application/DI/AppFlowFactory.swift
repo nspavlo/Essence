@@ -21,7 +21,7 @@ extension AppFlowFactory {
     func createIndexFlowFactory() -> IndexFlowFactory {
         IndexFlowFactory()
     }
-    
+
     func createRocketsFlowFactory() -> RocketsFlowFactory {
         RocketsFlowFactory(dispatcher: dispatcher)
     }
