@@ -13,7 +13,7 @@ struct LocalIndexRepository {
     let headings: Headings
 }
 
-// MARK: RocketsRepository
+// MARK: IndexRepository
 
 extension LocalIndexRepository: IndexRepository {
     func fetch(with completion: @escaping (Result<Headings, RequestError>) -> Void) -> Cancellable? {

@@ -15,7 +15,7 @@ struct RocketsListItemViewModel {
     let title: String
 }
 
-// MARK: Mapping
+// MARK: Adapter
 
 extension RocketsListItemViewModel {
     init(_ rocket: Rocket) {
