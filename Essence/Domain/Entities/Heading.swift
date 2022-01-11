@@ -14,3 +14,14 @@ typealias Headings = [Heading]
 enum Heading {
     case rockets
 }
+
+// MARK: Public
+
+extension Heading {
+    var title: String {
+        switch self {
+        case .rockets:
+            return "SpaceX Rockets"
+        }
+    }
+}

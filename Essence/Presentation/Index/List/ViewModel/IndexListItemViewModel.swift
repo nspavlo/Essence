@@ -14,11 +14,16 @@ typealias IndexListItemViewModels = [IndexListItemViewModel]
 class IndexListItemViewModel {
     let title: String
 
-    init(_ heading: Heading) {
-        switch heading {
-        case .rockets:
-            self.title = "SpaceX Rockets"
-        }
+    init(title: String) {
+        self.title = title
+    }
+}
+
+// MARK: Adapter
+
+extension IndexListItemViewModel {
+    convenience init(_ heading: Heading) {
+        self.init(title: heading.title)
     }
 }
 
