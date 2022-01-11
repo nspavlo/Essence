@@ -30,7 +30,7 @@ final class RocketsContainerViewControllerTest: XCTestCase {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
         sut.viewDidLoad()
-        XCTAssertEqual(sut.title, "Essence")
+        XCTAssertEqual(sut.title, "Rockets")
     }
 }
 
