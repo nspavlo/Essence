@@ -25,3 +25,11 @@ class IndexListItemViewModel {
 // MARK: Identifiable
 
 extension IndexListItemViewModel: Identifiable {}
+
+// MARK: Equatable
+
+extension IndexListItemViewModel: Equatable {
+    static func == (lhs: IndexListItemViewModel, rhs: IndexListItemViewModel) -> Bool {
+        lhs.title == rhs.title
+    }
+}
