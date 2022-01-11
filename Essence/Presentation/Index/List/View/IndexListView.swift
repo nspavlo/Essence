@@ -17,6 +17,7 @@ struct IndexListView: View {
         List(viewModelWrapper.items) { item in
             Text(item.title)
         }
+        .navigationTitle(Locale.title)
         .onAppear {
             self.viewModelWrapper.onAppear()
         }
@@ -41,4 +42,12 @@ final class IndexListViewModelWrapper: ObservableObject {
     func onAppear() {
         viewModel.onAppear()
     }
+}
+
+// MARK: Locale
+
+private typealias Locale = String
+
+private extension Locale {
+    static let title = "Essence Index"
 }
