@@ -30,7 +30,7 @@ extension SceneDelegate {
             ),
             appFlowFactory: AppFlowFactory()
         )
-        coordinator?.start()
+        coordinator?.start(animated: false)
     }
 }
 

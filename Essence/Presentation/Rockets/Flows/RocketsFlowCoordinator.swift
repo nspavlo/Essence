@@ -22,8 +22,8 @@ final class RocketsFlowCoordinator {
 // MARK: Coordinator
 
 extension RocketsFlowCoordinator: Coordinator {
-    func start() {
-        showRocketsList(animated: false)
+    func start(animated: Bool) {
+        showRocketsList(animated: animated)
     }
 
     func showRocketsList(animated: Bool) {

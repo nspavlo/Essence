@@ -22,23 +22,23 @@ final class AppFlowCoordinator {
 // MARK: Coordinator
 
 extension AppFlowCoordinator: Coordinator {
-    func start() {
-        startIndexFlow()
+    func start(animated: Bool) {
+        startIndexFlow(animated: animated)
     }
 }
 
 // MARK: Private Methods
 
 private extension AppFlowCoordinator {
-    func startIndexFlow() {
+    func startIndexFlow(animated: Bool) {
         let indexFlowFactory = appFlowFactory.createIndexFlowFactory()
         let indexFlowCoordinator = indexFlowFactory.createIndexFlowCoordinator(with: router)
-        indexFlowCoordinator.start()
+        indexFlowCoordinator.start(animated: animated)
     }
 
     func startRocketsFlow() {
         let rocketsFlowFactory = appFlowFactory.createRocketsFlowFactory()
         let rocketsFlowCoordinator = rocketsFlowFactory.createRocketsFlowCoordinator(with: router)
-        rocketsFlowCoordinator.start()
+        rocketsFlowCoordinator.start(animated: !coordinators.isEmpty)
     }
 }

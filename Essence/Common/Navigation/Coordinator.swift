@@ -10,5 +10,13 @@ import Foundation
 // MARK: Protocol
 
 protocol Coordinator {
-    func start()
+    func start(animated: Bool)
+}
+
+// MARK: Extensions
+
+extension Coordinator {
+    func start() {
+        start(animated: true)
+    }
 }

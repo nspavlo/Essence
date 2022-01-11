@@ -22,8 +22,8 @@ final class IndexFlowCoordinator {
 // MARK: Coordinator
 
 extension IndexFlowCoordinator: Coordinator {
-    func start() {
-        showIndexList(animated: false)
+    func start(animated: Bool) {
+        showIndexList(animated: animated)
     }
 
     func showIndexList(animated: Bool) {
