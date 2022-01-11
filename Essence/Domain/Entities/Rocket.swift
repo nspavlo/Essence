@@ -17,6 +17,7 @@ struct Rocket {
     let id: Identifier
     let name: String
     let description: String
+    let country: String
 }
 
 // MARK: Decodable

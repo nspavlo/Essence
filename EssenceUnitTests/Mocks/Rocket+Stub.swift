@@ -13,8 +13,14 @@ extension Rocket {
     static func stub(
         id: Rocket.Identifier = "1",
         name: String = "Fake Unit Test Object",
-        description: String = "Created For Unit Testing"
+        description: String = "Created For Unit Testing",
+        country: String = "Fake Country"
     ) -> Rocket {
-        Rocket(id: id, name: name, description: description)
+        Rocket(
+            id: id,
+            name: name,
+            description: description,
+            country: country
+        )
     }
 }

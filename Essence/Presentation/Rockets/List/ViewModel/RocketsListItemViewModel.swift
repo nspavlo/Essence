@@ -13,6 +13,7 @@ typealias RocketsListItemViewModels = [RocketsListItemViewModel]
 
 struct RocketsListItemViewModel {
     let title: String
+    let subtitle: String
 }
 
 // MARK: Adapter
@@ -20,5 +21,6 @@ struct RocketsListItemViewModel {
 extension RocketsListItemViewModel {
     init(_ rocket: Rocket) {
         self.title = rocket.name
+        self.subtitle = rocket.country
     }
 }
