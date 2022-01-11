@@ -52,7 +52,7 @@ extension SpyRocketsListViewModel: RocketsListViewModelInput {
         onAppearExecutionCount += 1
     }
 
-    func selectItem(at indexPath: IndexPath) {
+    func selectItem(at _: IndexPath) {
         didSelectItemExecutionCount += 1
     }
 }
