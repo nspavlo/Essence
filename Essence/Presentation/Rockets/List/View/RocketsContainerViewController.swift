@@ -26,7 +26,7 @@ final class RocketsContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        viewModel.viewDidLoad()
+        viewModel.onAppear()
     }
 }
 
@@ -34,17 +34,9 @@ final class RocketsContainerViewController: UIViewController {
 
 private extension RocketsContainerViewController {
     func setup() {
-        setupUI()
-        setupBindings()
-    }
-
-    func setupUI() {
-        title = Locale.title
-    }
-
-    func setupBindings() {
-        viewModel.changeState = { [weak self] state in
-            self?.render(state)
+        title = .title
+        viewModel.changeState = { [weak self] in
+            self?.render($0)
         }
     }
 
@@ -70,7 +62,7 @@ private extension RocketsContainerViewController {
 
     func showList(with items: RocketsListItemViewModels) {
         let viewController = RocketsTableViewController(items: items)
-        viewController.didSelectItem = viewModel.didSelectItem(at:)
+        viewController.didSelectItem = viewModel.selectItem(at:)
         replaceExisting(with: viewController, in: view)
     }
 
@@ -85,5 +77,5 @@ private extension RocketsContainerViewController {
 private typealias Locale = String
 
 private extension Locale {
-    static let title = "Essence"
+    static let title = "Rockets"
 }

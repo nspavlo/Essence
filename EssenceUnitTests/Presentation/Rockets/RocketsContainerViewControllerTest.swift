@@ -16,7 +16,7 @@ final class RocketsContainerViewControllerTest: XCTestCase {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
         sut.viewDidLoad()
-        XCTAssertEqual(viewModel.viewDidLoadExecutionCount, 1)
+        XCTAssertEqual(viewModel.onAppearExecutionCount, 1)
     }
 
     func testStateChangeBindingOnViewDidLoad() throws {
@@ -41,18 +41,18 @@ final class RocketsContainerViewControllerTest: XCTestCase {
 final class SpyRocketsListViewModel: RocketsListViewModelOutput {
     var changeState: ((RocketsListViewModelState) -> Void)?
 
-    var viewDidLoadExecutionCount = 0
+    var onAppearExecutionCount = 0
     var didSelectItemExecutionCount = 0
 }
 
 // MARK: RocketsListViewModelInput
 
 extension SpyRocketsListViewModel: RocketsListViewModelInput {
-    func viewDidLoad() {
-        viewDidLoadExecutionCount += 1
+    func onAppear() {
+        onAppearExecutionCount += 1
     }
 
-    func didSelectItem(at indexPath: IndexPath) {
+    func selectItem(at indexPath: IndexPath) {
         didSelectItemExecutionCount += 1
     }
 }

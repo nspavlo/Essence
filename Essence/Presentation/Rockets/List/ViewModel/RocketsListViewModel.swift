@@ -10,8 +10,8 @@ import Foundation
 // MARK: Input
 
 protocol RocketsListViewModelInput {
-    func viewDidLoad()
-    func didSelectItem(at indexPath: IndexPath)
+    func onAppear()
+    func selectItem(at indexPath: IndexPath)
 }
 
 // MARK: Output
@@ -49,7 +49,7 @@ final class RocketsListController: RocketsListViewModelOutput {
 // MARK: RocketsListViewModelInput
 
 extension RocketsListController: RocketsListViewModelInput {
-    func viewDidLoad() {
+    func onAppear() {
         changeState?(.loading)
 
         repository.fetch { [weak self] result in
@@ -66,7 +66,7 @@ extension RocketsListController: RocketsListViewModelInput {
         }
     }
 
-    func didSelectItem(at indexPath: IndexPath) {
+    func selectItem(at indexPath: IndexPath) {
         showRocketDetails?(rockets[indexPath.row])
     }
 }
