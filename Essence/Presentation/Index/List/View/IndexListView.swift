@@ -15,7 +15,9 @@ struct IndexListView: View {
 
     var body: some View {
         List(viewModelWrapper.items) { item in
-            Text(item.title)
+            Button(item.title) {
+                self.viewModelWrapper.didSelect(item)
+            }
         }
         .navigationTitle(Locale.title)
         .onAppear {
@@ -41,6 +43,14 @@ final class IndexListViewModelWrapper: ObservableObject {
 
     func onAppear() {
         viewModel.onAppear()
+    }
+
+    func didSelect(_ item: IndexListItemViewModel) {
+        guard let index = items.firstIndex(where: { $0 == item }) else {
+            fatalError("Unknown item: \(item), in: \(items)")
+        }
+
+        viewModel.didSelectItem(at: IndexPath(row: index, section: 0))
     }
 }
 

@@ -12,6 +12,7 @@ import UIKit
 final class AppFlowCoordinator {
     private let router: Router
     private let appFlowFactory: AppFlowFactory
+    private var coordinators = [Coordinator]()
 
     init(router: Router, appFlowFactory: AppFlowFactory) {
         self.router = router
@@ -33,7 +34,14 @@ private extension AppFlowCoordinator {
     func startIndexFlow(animated: Bool) {
         let indexFlowFactory = appFlowFactory.createIndexFlowFactory()
         let indexFlowCoordinator = indexFlowFactory.createIndexFlowCoordinator(with: router)
+        indexFlowCoordinator.showHeading = { [weak self] heading in
+            switch heading {
+            case .rockets:
+                self?.startRocketsFlow()
+            }
+        }
         indexFlowCoordinator.start(animated: animated)
+        coordinators = [indexFlowCoordinator]
     }
 
     func startRocketsFlow() {

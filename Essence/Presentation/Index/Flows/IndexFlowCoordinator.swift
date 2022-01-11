@@ -10,6 +10,8 @@ import SwiftUI
 // MARK: Initialization
 
 final class IndexFlowCoordinator {
+    var showHeading: ((Heading) -> Void)?
+
     private let router: Router
     private let indexFlowFactory: IndexFlowFactory
 
@@ -29,6 +31,9 @@ extension IndexFlowCoordinator: Coordinator {
     func showIndexList(animated: Bool) {
         let repository = indexFlowFactory.createIndexRepository()
         let viewModel = IndexListController(repository: repository)
+        viewModel.showHeading = { [weak self] heading in
+            self?.showHeading?(heading)
+        }
         let viewModelWrapper = IndexListViewModelWrapper(viewModel: viewModel)
         let indexView = IndexListView(viewModelWrapper: viewModelWrapper)
         let viewController = UIHostingController(rootView: indexView)

@@ -24,7 +24,7 @@ extension IndexFlowFactory {
 // MARK: Coordinators
 
 extension IndexFlowFactory {
-    func createIndexFlowCoordinator(with router: Router) -> Coordinator {
+    func createIndexFlowCoordinator(with router: Router) -> IndexFlowCoordinator {
         IndexFlowCoordinator(router: router, indexFlowFactory: self)
     }
 }
