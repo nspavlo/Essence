@@ -22,7 +22,7 @@ enum RocketsListError: Error {
 
 enum RocketsListViewModelState {
     case loading
-    case result(Result<[RocketsListItemViewModel], RocketsListError>)
+    case result(Result<RocketsListItemViewModels, RocketsListError>)
 }
 
 protocol RocketsListViewModelOutput: AnyObject {
@@ -41,7 +41,6 @@ final class RocketsListController: RocketsListViewModelOutput {
     var changeState: ((RocketsListViewModelState) -> Void)?
     var showRocketDetails: ((Rocket) -> Void)?
 
-    private var items: [RocketsListItemViewModel] = []
     private var rockets: Rockets = []
     private let repository: RocketsRepository
 
@@ -62,8 +61,7 @@ extension RocketsListController: RocketsListViewModelInput {
             switch result {
             case .success(let rockets):
                 self.rockets = rockets
-                self.items = rockets.map(RocketsListItemViewModel.init(_:))
-                self.changeState?(.result(.success(self.items)))
+                self.changeState?(.result(.success(rockets.map(RocketsListItemViewModel.init(_:)))))
             case .failure(let error):
                 self.changeState?(.result(.failure(.unknown(error))))
             }
