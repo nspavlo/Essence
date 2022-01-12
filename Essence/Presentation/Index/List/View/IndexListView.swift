@@ -37,7 +37,7 @@ final class IndexListViewModelWrapper: ObservableObject {
     init(viewModel: IndexListViewModel) {
         self.viewModel = viewModel
         self.viewModel.onUpdate = { [weak self] items in
-            self?.items = items
+            self?.items = (try? items.get()) ?? []
         }
     }
 

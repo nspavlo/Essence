@@ -16,8 +16,12 @@ protocol IndexListViewModelInput {
 
 // MARK: Output
 
+enum IndexListError: Error {
+    case unknown(Error)
+}
+
 protocol IndexListViewModelOutput: AnyObject {
-    var onUpdate: ((IndexListItemViewModels) -> Void)? { get set }
+    var onUpdate: ((Result<IndexListItemViewModels, IndexListError>) -> Void)? { get set }
 }
 
 // MARK: Protocol
@@ -29,7 +33,7 @@ typealias IndexListViewModel = IndexListViewModelInput & IndexListViewModelOutpu
 // MARK: Initialization
 
 final class IndexListController: IndexListViewModelOutput {
-    var onUpdate: ((IndexListItemViewModels) -> Void)?
+    var onUpdate: ((Result<IndexListItemViewModels, IndexListError>) -> Void)?
     var showHeading: ((Heading) -> Void)?
 
     private var headings: Headings = []
@@ -50,9 +54,9 @@ extension IndexListController: IndexListViewModelInput {
             switch result {
             case .success(let headings):
                 self.headings = headings
-                self.onUpdate?(headings.map(IndexListItemViewModel.init(_:)))
-            case .failure:
-                break
+                self.onUpdate?(.success(headings.map(IndexListItemViewModel.init(_:))))
+            case .failure(let error):
+                self.onUpdate?(.failure(.unknown(error)))
             }
         }
     }
