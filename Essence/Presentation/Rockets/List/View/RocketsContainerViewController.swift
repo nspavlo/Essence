@@ -35,7 +35,16 @@ final class RocketsContainerViewController: UIViewController {
 
 private extension RocketsContainerViewController {
     func setup() {
+        setupUI()
+        setupBindings()
+    }
+
+    func setupUI() {
         title = .title
+        view.backgroundColor = .systemBackground
+    }
+
+    func setupBindings() {
         viewModel.changeState = { [weak self] in
             self?.render($0)
         }

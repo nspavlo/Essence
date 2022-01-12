@@ -15,21 +15,30 @@ final class RocketsContainerViewControllerTest: XCTestCase {
     func testViewModelBindingOnViewDidLoad() throws {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
-        sut.viewDidLoad()
+
+        // Trigger `viewDidLoad`
+        _ = sut.view.bounds
+
         XCTAssertEqual(viewModel.onAppearExecutionCount, 1)
     }
 
     func testStateChangeBindingOnViewDidLoad() throws {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
-        sut.viewDidLoad()
+
+        // Trigger `viewDidLoad`
+        _ = sut.view.bounds
+
         XCTAssertNotNil(viewModel.changeState)
     }
 
     func testTitleSetupOnViewDidLoad() throws {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
-        sut.viewDidLoad()
+
+        // Trigger `viewDidLoad`
+        _ = sut.view.bounds
+
         XCTAssertEqual(sut.title, "Rockets")
     }
 }
