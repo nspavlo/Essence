@@ -16,9 +16,13 @@ protocol RocketsListViewModelInput {
 
 // MARK: Output
 
+enum RocketsListError: Error {
+    case unknown(Error)
+}
+
 enum RocketsListViewModelState {
     case loading
-    case result(Result<[RocketsListItemViewModel], Error>)
+    case result(Result<[RocketsListItemViewModel], RocketsListError>)
 }
 
 protocol RocketsListViewModelOutput: AnyObject {
@@ -61,7 +65,7 @@ extension RocketsListController: RocketsListViewModelInput {
                 self.items = rockets.map(RocketsListItemViewModel.init(_:))
                 self.changeState?(.result(.success(self.items)))
             case .failure(let error):
-                self.changeState?(.result(.failure(error)))
+                self.changeState?(.result(.failure(.unknown(error))))
             }
         }
     }

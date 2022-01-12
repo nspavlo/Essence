@@ -23,3 +23,11 @@ struct Rocket {
 // MARK: Decodable
 
 extension Rocket: Decodable {}
+
+// MARK: Equatable
+
+extension Rocket: Equatable {
+    public static func == (lhs: Rocket, rhs: Rocket) -> Bool {
+        lhs.id == rhs.id
+    }
+}

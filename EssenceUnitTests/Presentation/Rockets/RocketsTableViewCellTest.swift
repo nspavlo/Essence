@@ -11,7 +11,7 @@ import XCTest
 
 // MARK: Test
 
-class RocketsTableViewCellTest: XCTestCase {
+final class RocketsTableViewCellTest: XCTestCase {
     func testInitialTextValues() throws {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
         XCTAssertNil(sut.textLabel?.text)

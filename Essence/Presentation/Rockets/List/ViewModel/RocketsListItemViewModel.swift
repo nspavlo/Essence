@@ -11,7 +11,7 @@ typealias RocketsListItemViewModels = [RocketsListItemViewModel]
 
 // MARK: Initialization
 
-struct RocketsListItemViewModel {
+struct RocketsListItemViewModel: Equatable {
     let title: String
     let subtitle: String
 }
