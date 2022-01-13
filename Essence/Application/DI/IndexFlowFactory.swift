@@ -16,7 +16,8 @@ final class IndexFlowFactory {}
 extension IndexFlowFactory {
     func createIndexRepository() -> IndexRepository {
         LocalIndexRepository(headings: [
-            .rockets
+            .rockets,
+            .strava
         ])
     }
 }

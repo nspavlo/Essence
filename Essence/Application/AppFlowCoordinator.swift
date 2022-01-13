@@ -38,6 +38,8 @@ private extension AppFlowCoordinator {
             switch heading {
             case .rockets:
                 self?.startRocketsFlow()
+            case .strava:
+                self?.startStravaFlow()
             }
         }
         indexFlowCoordinator.start(animated: animated)
@@ -48,5 +50,9 @@ private extension AppFlowCoordinator {
         let rocketsFlowFactory = appFlowFactory.createRocketsFlowFactory()
         let rocketsFlowCoordinator = rocketsFlowFactory.createRocketsFlowCoordinator(with: router)
         rocketsFlowCoordinator.start(animated: !coordinators.isEmpty)
+    }
+
+    func startStravaFlow() {
+        fatalError("Here be dragons!")
     }
 }

@@ -11,17 +11,13 @@ typealias Headings = [Heading]
 
 // MARK: Initialization
 
-enum Heading {
-    case rockets
+enum Heading: String {
+    case rockets = "SpaceX"
+    case strava = "STRAVA"
 }
 
 // MARK: Public
 
 extension Heading {
-    var title: String {
-        switch self {
-        case .rockets:
-            return "SpaceX Rockets"
-        }
-    }
+    var title: String { rawValue }
 }
