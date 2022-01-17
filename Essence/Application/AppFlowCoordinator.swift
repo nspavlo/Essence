@@ -48,7 +48,9 @@ private extension AppFlowCoordinator {
     }
 
     func startStravaExperimentalFlow() {
-        fatalError("Here be dragons!")
+        let stravaFlowFactory = appFlowFactory.createStravaExperimentalFlowFactory()
+        let stravaFlowCoordinator = stravaFlowFactory.createStravaExperimentalFlowCoordinator(with: router)
+        stravaFlowCoordinator.start(animated: !coordinators.isEmpty)
     }
 }
 

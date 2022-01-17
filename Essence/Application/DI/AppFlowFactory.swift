@@ -25,4 +25,8 @@ extension AppFlowFactory {
     func createRocketsFlowFactory() -> RocketsFlowFactory {
         RocketsFlowFactory(dispatcher: dispatcher)
     }
+
+    func createStravaExperimentalFlowFactory() -> StravaExperimentalFlowFactory {
+        StravaExperimentalFlowFactory()
+    }
 }
