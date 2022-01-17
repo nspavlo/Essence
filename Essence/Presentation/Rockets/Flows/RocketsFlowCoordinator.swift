@@ -42,7 +42,7 @@ private extension RocketsFlowCoordinator {
 
     func showRocketDetails(with _: Rocket, animated: Bool) {
         let viewController = UIViewController()
-        viewController.view.backgroundColor = .white
+        viewController.view.backgroundColor = .systemBackground
         router.push(viewController, animated: animated)
     }
 }
