@@ -34,8 +34,8 @@ private extension AppFlowCoordinator {
     func startIndexFlow(animated: Bool) {
         let indexFlowFactory = appFlowFactory.createIndexFlowFactory()
         let indexFlowCoordinator = indexFlowFactory.createIndexFlowCoordinator(with: router)
-        indexFlowCoordinator.showHeading = { [weak self] heading in
-            self?.startAppropriateFlow(for: heading)
+        indexFlowCoordinator.showHeading = { [unowned self] heading in
+            self.startAppropriateFlow(for: heading)
         }
         indexFlowCoordinator.start(animated: animated)
         coordinators = [indexFlowCoordinator]
