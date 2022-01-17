@@ -28,7 +28,7 @@ extension StravaExperimentalFlowCoordinator: Coordinator {
 // MARK: Private Methods
 
 private extension StravaExperimentalFlowCoordinator {
-    func showAuthentication(animated: Bool) {
+    func showAuthentication(animated _: Bool) {
         let viewController = UIViewController()
         viewController.view.backgroundColor = .systemBackground
         router.push(viewController, animated: true)
