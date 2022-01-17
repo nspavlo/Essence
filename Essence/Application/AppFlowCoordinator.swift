@@ -35,12 +35,7 @@ private extension AppFlowCoordinator {
         let indexFlowFactory = appFlowFactory.createIndexFlowFactory()
         let indexFlowCoordinator = indexFlowFactory.createIndexFlowCoordinator(with: router)
         indexFlowCoordinator.showHeading = { [weak self] heading in
-            switch heading {
-            case .rockets:
-                self?.startRocketsFlow()
-            case .strava:
-                self?.startStravaFlow()
-            }
+            self?.startAppropriateFlow(for: heading)
         }
         indexFlowCoordinator.start(animated: animated)
         coordinators = [indexFlowCoordinator]
@@ -52,7 +47,20 @@ private extension AppFlowCoordinator {
         rocketsFlowCoordinator.start(animated: !coordinators.isEmpty)
     }
 
-    func startStravaFlow() {
+    func startStravaExperimentalFlow() {
         fatalError("Here be dragons!")
+    }
+}
+
+// MARK: Adapters
+
+private extension AppFlowCoordinator {
+    func startAppropriateFlow(for heading: Heading) {
+        switch heading {
+        case .rockets:
+            startRocketsFlow()
+        case .strava:
+            startStravaExperimentalFlow()
+        }
     }
 }
