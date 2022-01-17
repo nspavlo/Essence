@@ -18,4 +18,3 @@ extension StravaExperimentalFlowFactory {
         StravaExperimentalFlowCoordinator(router: router)
     }
 }
-
