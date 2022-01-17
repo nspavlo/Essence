@@ -21,6 +21,16 @@ final class StravaExperimentalFlowCoordinator {
 
 extension StravaExperimentalFlowCoordinator: Coordinator {
     func start(animated: Bool) {
-        fatalError("Here be dragons!")
+        showAuthentication(animated: animated)
+    }
+}
+
+// MARK: Private Methods
+
+private extension StravaExperimentalFlowCoordinator {
+    func showAuthentication(animated: Bool) {
+        let viewController = UIViewController()
+        viewController.view.backgroundColor = .systemBackground
+        router.push(viewController, animated: true)
     }
 }

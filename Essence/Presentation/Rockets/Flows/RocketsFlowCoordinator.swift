@@ -25,7 +25,11 @@ extension RocketsFlowCoordinator: Coordinator {
     func start(animated: Bool) {
         showRocketsList(animated: animated)
     }
+}
 
+// MARK: Private Methods
+
+private extension RocketsFlowCoordinator {
     func showRocketsList(animated: Bool) {
         let repository = rocketsFlowFactory.createRocketsRepository()
         let viewModel = RocketsListController(repository: repository)

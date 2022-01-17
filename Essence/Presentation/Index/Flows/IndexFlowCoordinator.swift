@@ -27,7 +27,11 @@ extension IndexFlowCoordinator: Coordinator {
     func start(animated: Bool) {
         showIndexList(animated: animated)
     }
+}
 
+// MARK: Private Methods
+
+private extension IndexFlowCoordinator {
     func showIndexList(animated: Bool) {
         let repository = indexFlowFactory.createIndexRepository()
         let viewModel = IndexListController(repository: repository)
