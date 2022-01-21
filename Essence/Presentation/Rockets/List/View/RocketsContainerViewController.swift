@@ -45,7 +45,7 @@ private extension RocketsContainerViewController {
     }
 
     func setupBindings() {
-        viewModel.changeState = { [weak self] in
+        viewModel.onUpdate = { [weak self] in
             self?.render($0)
         }
     }

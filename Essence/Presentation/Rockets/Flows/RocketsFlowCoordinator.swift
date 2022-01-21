@@ -33,7 +33,7 @@ private extension RocketsFlowCoordinator {
     func showRocketsList(animated: Bool) {
         let repository = rocketsFlowFactory.createRocketsRepository()
         let viewModel = RocketsListController(repository: repository)
-        viewModel.showRocketDetails = { rocket in
+        viewModel.onSelect = { rocket in
             self.showRocketDetails(with: rocket, animated: true)
         }
         let viewController = RocketsContainerViewController(viewModel: viewModel)

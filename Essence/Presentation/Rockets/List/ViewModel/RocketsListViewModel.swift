@@ -26,7 +26,7 @@ enum RocketsListViewModelState {
 }
 
 protocol RocketsListViewModelOutput: AnyObject {
-    var changeState: ((RocketsListViewModelState) -> Void)? { get set }
+    var onUpdate: ((RocketsListViewModelState) -> Void)? { get set }
 }
 
 // MARK: Protocol
@@ -38,8 +38,8 @@ typealias RocketsListViewModel = RocketsListViewModelInput & RocketsListViewMode
 // MARK: Initialization
 
 final class RocketsListController: RocketsListViewModelOutput {
-    var changeState: ((RocketsListViewModelState) -> Void)?
-    var showRocketDetails: ((Rocket) -> Void)?
+    var onUpdate: ((RocketsListViewModelState) -> Void)?
+    var onSelect: ((Rocket) -> Void)?
 
     private var rockets: Rockets = []
     private let repository: RocketsRepository
@@ -53,7 +53,7 @@ final class RocketsListController: RocketsListViewModelOutput {
 
 extension RocketsListController: RocketsListViewModelInput {
     func onAppear() {
-        changeState?(.loading)
+        onUpdate?(.loading)
 
         repository.fetch { [weak self] result in
             guard let self = self else { return }
@@ -61,14 +61,14 @@ extension RocketsListController: RocketsListViewModelInput {
             switch result {
             case .success(let rockets):
                 self.rockets = rockets
-                self.changeState?(.result(.success(rockets.map(RocketsListItemViewModel.init(_:)))))
+                self.onUpdate?(.result(.success(rockets.map(RocketsListItemViewModel.init(_:)))))
             case .failure(let error):
-                self.changeState?(.result(.failure(.unknown(error))))
+                self.onUpdate?(.result(.failure(.unknown(error))))
             }
         }
     }
 
     func selectItem(at indexPath: IndexPath) {
-        showRocketDetails?(rockets[indexPath.row])
+        onSelect?(rockets[indexPath.row])
     }
 }

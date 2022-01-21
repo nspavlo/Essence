@@ -15,7 +15,7 @@ final class RocketsListControllerTest: XCTestCase {
     func testOnAppearLoadingState() throws {
         var state: RocketsListViewModelState?
         let sut = RocketsListController(repository: NonRespondingRocketsRepository())
-        sut.changeState = { state = $0 }
+        sut.onUpdate = { state = $0 }
         sut.onAppear()
         XCTAssertEqual(state, .loading)
     }
@@ -23,7 +23,7 @@ final class RocketsListControllerTest: XCTestCase {
     func testOnAppearLResultState() throws {
         var state: RocketsListViewModelState?
         let sut = RocketsListController(repository: LocalRocketsRepository())
-        sut.changeState = { state = $0 }
+        sut.onUpdate = { state = $0 }
         sut.onAppear()
 
         guard case let .result(result) = state, let viewModels = try? result.get() else {
@@ -37,7 +37,7 @@ final class RocketsListControllerTest: XCTestCase {
     func testSelectionAtIndexPath() throws {
         var rocket: Rocket?
         let sut = RocketsListController(repository: LocalRocketsRepository())
-        sut.showRocketDetails = { rocket = $0 }
+        sut.onSelect = { rocket = $0 }
         sut.onAppear()
         sut.selectItem(at: IndexPath(row: 1, section: 0))
         XCTAssertEqual(rocket, .stub(id: "2"))

@@ -29,7 +29,7 @@ final class RocketsContainerViewControllerTest: XCTestCase {
         // Trigger `viewDidLoad`
         _ = sut.view.bounds
 
-        XCTAssertNotNil(viewModel.changeState)
+        XCTAssertNotNil(viewModel.onUpdate)
     }
 
     func testTitleSetupOnViewDidLoad() throws {
@@ -48,7 +48,7 @@ final class RocketsContainerViewControllerTest: XCTestCase {
 // MARK: Initialization
 
 final class SpyRocketsListViewModel: RocketsListViewModelOutput {
-    var changeState: ((RocketsListViewModelState) -> Void)?
+    var onUpdate: ((RocketsListViewModelState) -> Void)?
 
     var onAppearExecutionCount = 0
     var didSelectItemExecutionCount = 0
