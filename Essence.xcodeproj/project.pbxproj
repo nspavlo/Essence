@@ -56,6 +56,7 @@
 		3DC45A9C279620BB0008F393 /* StravaExperimentalFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45A9B279620BB0008F393 /* StravaExperimentalFlowFactory.swift */; };
 		3DC45A9E279621570008F393 /* StravaExperimentalFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45A9D279621570008F393 /* StravaExperimentalFlowCoordinator.swift */; };
 		3DC45AB9279B335B0008F393 /* IndexListControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45AB8279B335B0008F393 /* IndexListControllerTest.swift */; };
+		3DC45ABD279B39260008F393 /* LocalIndexRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45ABC279B39260008F393 /* LocalIndexRepositoryTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		3DC45A9B279620BB0008F393 /* StravaExperimentalFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaExperimentalFlowFactory.swift; sourceTree = "<group>"; };
 		3DC45A9D279621570008F393 /* StravaExperimentalFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaExperimentalFlowCoordinator.swift; sourceTree = "<group>"; };
 		3DC45AB8279B335B0008F393 /* IndexListControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexListControllerTest.swift; sourceTree = "<group>"; };
+		3DC45ABC279B39260008F393 /* LocalIndexRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalIndexRepositoryTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 			children = (
 				3DBF8A0125C1EF2700D4A280 /* Mocks */,
 				3DBF8A4225C5750300D4A280 /* Presentation */,
+				3DC45ABA279B38620008F393 /* Repositories */,
 				3DBF863D25BC1ED400D4A280 /* Info.plist */,
 			);
 			path = EssenceUnitTests;
@@ -560,6 +563,22 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		3DC45ABA279B38620008F393 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3DC45ABB279B388E0008F393 /* Index */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3DC45ABB279B388E0008F393 /* Index */ = {
+			isa = PBXGroup;
+			children = (
+				3DC45ABC279B39260008F393 /* LocalIndexRepositoryTest.swift */,
+			);
+			path = Index;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -715,6 +734,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC45ABD279B39260008F393 /* LocalIndexRepositoryTest.swift in Sources */,
 				3DAE43F9278E196400881980 /* IndexListItemViewModelTest.swift in Sources */,
 				3DBF8A4725C5754300D4A280 /* RocketsContainerViewControllerTest.swift in Sources */,
 				3DBF8A0525C1EFA500D4A280 /* Rocket+Stub.swift in Sources */,
