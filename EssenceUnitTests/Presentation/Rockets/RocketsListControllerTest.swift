@@ -76,6 +76,7 @@ extension RocketsListError: Equatable {
         "\(lhs)" == "\(rhs)"
     }
 }
+
 extension RocketsListViewModelState: Equatable {
     public static func == (lhs: RocketsListViewModelState, rhs: RocketsListViewModelState) -> Bool {
         switch (lhs, rhs) {
