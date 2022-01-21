@@ -9,20 +9,24 @@ import XCTest
 
 @testable import Essence
 
-// MARK: Test
+// MARK: XCTestCase
 
 final class LocalIndexRepositoryTest: XCTestCase {
-    func testEmptyRepository() {
+    func test_repository_withEmptyHeadingsArray_shouldReturnEmptyHeadingsArray() {
         var result: Result<Headings, RequestError>?
         let sut = LocalIndexRepository(headings: [])
+
         _ = sut.fetch { result = $0 }
+
         XCTAssertEqual(try? result?.get(), [])
     }
 
-    func testNonEmptyRepository() {
+    func test_repository_withStravaHeading_shouldReturnStravaHeading() {
         var result: Result<Headings, RequestError>?
         let sut = LocalIndexRepository(headings: [.strava])
+
         _ = sut.fetch { result = $0 }
+
         XCTAssertEqual(try? result?.get(), [.strava])
     }
 }

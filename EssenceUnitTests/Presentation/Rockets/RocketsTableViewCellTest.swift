@@ -9,20 +9,36 @@ import XCTest
 
 @testable import Essence
 
-// MARK: Test
+// MARK: XCTestCase
 
 final class RocketsTableViewCellTest: XCTestCase {
-    func testInitialTextValues() {
+    func test_init_withoutItemViewModel_shouldContainEmptyTitle() {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
+
         XCTAssertNil(sut.textLabel?.text)
+    }
+
+    func test_init_withoutItemViewModel_shouldContainEmptySubtitle() {
+        let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
+
         XCTAssertNil(sut.detailTextLabel?.text)
     }
 
-    func testAssignedTextValues() {
+    func test_configure_withItemViewModel_shouldContainGivenTitle() {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
         let viewModel = RocketsListItemViewModel(title: "Index", subtitle: "Latvia")
+
         sut.configure(with: viewModel)
+
         XCTAssertEqual(sut.textLabel?.text, viewModel.title)
+    }
+
+    func test_configure_withItemViewModel_shouldContainGivenSubtitle() {
+        let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
+        let viewModel = RocketsListItemViewModel(title: "Index", subtitle: "Latvia")
+
+        sut.configure(with: viewModel)
+
         XCTAssertEqual(sut.detailTextLabel?.text, viewModel.subtitle)
     }
 }

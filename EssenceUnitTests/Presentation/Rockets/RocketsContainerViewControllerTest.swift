@@ -9,10 +9,10 @@ import XCTest
 
 @testable import Essence
 
-// MARK: Test
+// MARK: XCTestCase
 
 final class RocketsContainerViewControllerTest: XCTestCase {
-    func testViewModelBindingOnViewDidLoad() {
+    func test_binding_withViewDidLoad_shouldExecuteOnAppearOnce() {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
 
@@ -22,7 +22,7 @@ final class RocketsContainerViewControllerTest: XCTestCase {
         XCTAssertEqual(viewModel.onAppearExecutionCount, 1)
     }
 
-    func testStateChangeBindingOnViewDidLoad() {
+    func test_binding_withViewDidLoad_shouldSubscribeForUpdates() {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
 
@@ -32,7 +32,7 @@ final class RocketsContainerViewControllerTest: XCTestCase {
         XCTAssertNotNil(viewModel.onUpdate)
     }
 
-    func testTitleSetupOnViewDidLoad() {
+    func test_binding_withViewDidLoad_shouldContainGivenTitle() {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
 

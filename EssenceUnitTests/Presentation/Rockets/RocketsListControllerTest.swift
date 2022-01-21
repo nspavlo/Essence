@@ -9,21 +9,24 @@ import XCTest
 
 @testable import Essence
 
-// MARK: Test
+// MARK: XCTestCase
 
 final class RocketsListControllerTest: XCTestCase {
-    func testOnAppearLoadingState() {
+    func test_onAppear_shouldChangeToLoadingState() {
         var state: RocketsListViewModelState?
         let sut = RocketsListController(repository: NonRespondingRocketsRepository())
         sut.onUpdate = { state = $0 }
+
         sut.onAppear()
+
         XCTAssertEqual(state, .loading)
     }
 
-    func testOnAppearLResultState() {
+    func test_onAppear_withNonEmptyRepository_shouldReturnNonEmptySuccess() {
         var state: RocketsListViewModelState?
         let sut = RocketsListController(repository: LocalRocketsRepository())
         sut.onUpdate = { state = $0 }
+
         sut.onAppear()
 
         guard case let .result(result) = state, let viewModels = try? result.get() else {
@@ -34,12 +37,14 @@ final class RocketsListControllerTest: XCTestCase {
         XCTAssertEqual(viewModels.count, 2)
     }
 
-    func testSelectionAtIndexPath() {
+    func test_selection_whenFirstIndexSelected_shouldReturnFirstRocket() {
         var rocket: Rocket?
         let sut = RocketsListController(repository: LocalRocketsRepository())
         sut.onSelect = { rocket = $0 }
+
         sut.onAppear()
         sut.selectItem(at: IndexPath(row: 1, section: 0))
+
         XCTAssertEqual(rocket, .stub(id: "2"))
     }
 }

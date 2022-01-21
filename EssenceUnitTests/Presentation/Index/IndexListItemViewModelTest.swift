@@ -9,18 +9,20 @@ import XCTest
 
 @testable import Essence
 
-// MARK: Test
+// MARK: XCTestCase
 
 final class IndexListItemViewModelTest: XCTestCase {
-    func testTwoNonEqualViewModels() {
+    func test_equality_withNonMatchingTitle_shouldNotBeEqual() {
         let a = IndexListItemViewModel(title: "Index")
         let b = IndexListItemViewModel(title: "Rockets")
+
         XCTAssertNotEqual(a, b)
     }
 
-    func testTwoEqualViewModels() {
+    func test_equality_withMatchingTitle_shouldBeEqual() {
         let a = IndexListItemViewModel(title: "Index")
         let b = IndexListItemViewModel(title: "Index")
+
         XCTAssertEqual(a, b)
     }
 }
