@@ -12,13 +12,13 @@ import XCTest
 // MARK: Test
 
 final class IndexListItemViewModelTest: XCTestCase {
-    func testTwoNonEqualViewModels() throws {
+    func testTwoNonEqualViewModels() {
         let a = IndexListItemViewModel(title: "Index")
         let b = IndexListItemViewModel(title: "Rockets")
         XCTAssertNotEqual(a, b)
     }
 
-    func testTwoEqualViewModels() throws {
+    func testTwoEqualViewModels() {
         let a = IndexListItemViewModel(title: "Index")
         let b = IndexListItemViewModel(title: "Index")
         XCTAssertEqual(a, b)

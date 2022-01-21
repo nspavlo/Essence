@@ -12,7 +12,7 @@ import XCTest
 // MARK: Test
 
 final class IndexListControllerTest: XCTestCase {
-    func testOnAppearEmptySuccessReponse() throws {
+    func testOnAppearEmptySuccessReponse() {
         var result: Result<IndexListItemViewModels, IndexListError>?
         let sut = IndexListController(repository: LocalIndexRepository(headings: []))
         sut.onUpdate = { result = $0 }
@@ -20,7 +20,7 @@ final class IndexListControllerTest: XCTestCase {
         XCTAssertEqual(try? result?.get(), [])
     }
 
-    func testOnAppearNonEmptySuccessResponse() throws {
+    func testOnAppearNonEmptySuccessResponse() {
         var result: Result<IndexListItemViewModels, IndexListError>?
         let sut = IndexListController(repository: LocalIndexRepository(headings: [.strava]))
         sut.onUpdate = { result = $0 }
@@ -28,7 +28,7 @@ final class IndexListControllerTest: XCTestCase {
         XCTAssertEqual(try? result?.get(), [IndexListItemViewModel(.strava)])
     }
 
-    func testSelectionAtIndexPath() throws {
+    func testSelectionAtIndexPath() {
         var heading: Heading?
         let sut = IndexListController(repository: LocalIndexRepository(headings: [.rockets, .strava]))
         sut.onSelect = { heading = $0 }

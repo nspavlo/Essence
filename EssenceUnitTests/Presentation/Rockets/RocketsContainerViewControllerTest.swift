@@ -12,7 +12,7 @@ import XCTest
 // MARK: Test
 
 final class RocketsContainerViewControllerTest: XCTestCase {
-    func testViewModelBindingOnViewDidLoad() throws {
+    func testViewModelBindingOnViewDidLoad() {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
 
@@ -22,7 +22,7 @@ final class RocketsContainerViewControllerTest: XCTestCase {
         XCTAssertEqual(viewModel.onAppearExecutionCount, 1)
     }
 
-    func testStateChangeBindingOnViewDidLoad() throws {
+    func testStateChangeBindingOnViewDidLoad() {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
 
@@ -32,7 +32,7 @@ final class RocketsContainerViewControllerTest: XCTestCase {
         XCTAssertNotNil(viewModel.onUpdate)
     }
 
-    func testTitleSetupOnViewDidLoad() throws {
+    func testTitleSetupOnViewDidLoad() {
         let viewModel = SpyRocketsListViewModel()
         let sut = RocketsContainerViewController(viewModel: viewModel)
 

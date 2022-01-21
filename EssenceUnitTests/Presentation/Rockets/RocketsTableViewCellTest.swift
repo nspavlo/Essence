@@ -12,13 +12,13 @@ import XCTest
 // MARK: Test
 
 final class RocketsTableViewCellTest: XCTestCase {
-    func testInitialTextValues() throws {
+    func testInitialTextValues() {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
         XCTAssertNil(sut.textLabel?.text)
         XCTAssertNil(sut.detailTextLabel?.text)
     }
 
-    func testAssignedTextValues() throws {
+    func testAssignedTextValues() {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
         let viewModel = RocketsListItemViewModel(title: "Index", subtitle: "Latvia")
         sut.configure(with: viewModel)

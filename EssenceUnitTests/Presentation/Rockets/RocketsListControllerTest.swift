@@ -12,7 +12,7 @@ import XCTest
 // MARK: Test
 
 final class RocketsListControllerTest: XCTestCase {
-    func testOnAppearLoadingState() throws {
+    func testOnAppearLoadingState() {
         var state: RocketsListViewModelState?
         let sut = RocketsListController(repository: NonRespondingRocketsRepository())
         sut.onUpdate = { state = $0 }
@@ -20,7 +20,7 @@ final class RocketsListControllerTest: XCTestCase {
         XCTAssertEqual(state, .loading)
     }
 
-    func testOnAppearLResultState() throws {
+    func testOnAppearLResultState() {
         var state: RocketsListViewModelState?
         let sut = RocketsListController(repository: LocalRocketsRepository())
         sut.onUpdate = { state = $0 }
@@ -34,7 +34,7 @@ final class RocketsListControllerTest: XCTestCase {
         XCTAssertEqual(viewModels.count, 2)
     }
 
-    func testSelectionAtIndexPath() throws {
+    func testSelectionAtIndexPath() {
         var rocket: Rocket?
         let sut = RocketsListController(repository: LocalRocketsRepository())
         sut.onSelect = { rocket = $0 }
