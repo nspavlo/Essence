@@ -35,7 +35,7 @@ private extension IndexFlowCoordinator {
     func showIndexList(animated: Bool) {
         let repository = indexFlowFactory.createIndexRepository()
         let viewModel = IndexListController(repository: repository)
-        viewModel.showHeading = { [weak self] heading in
+        viewModel.onSelect = { [weak self] heading in
             self?.showHeading?(heading)
         }
         let viewModelWrapper = IndexListViewModelWrapper(viewModel: viewModel)

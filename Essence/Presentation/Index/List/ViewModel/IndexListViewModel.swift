@@ -11,7 +11,7 @@ import Foundation
 
 protocol IndexListViewModelInput {
     func onAppear()
-    func didSelectItem(at indexPath: IndexPath)
+    func selectItem(at indexPath: IndexPath)
 }
 
 // MARK: Output
@@ -34,7 +34,7 @@ typealias IndexListViewModel = IndexListViewModelInput & IndexListViewModelOutpu
 
 final class IndexListController: IndexListViewModelOutput {
     var onUpdate: ((Result<IndexListItemViewModels, IndexListError>) -> Void)?
-    var showHeading: ((Heading) -> Void)?
+    var onSelect: ((Heading) -> Void)?
 
     private var headings: Headings = []
     private let repository: IndexRepository
@@ -55,13 +55,13 @@ extension IndexListController: IndexListViewModelInput {
             case .success(let headings):
                 self.headings = headings
                 self.onUpdate?(.success(headings.map(IndexListItemViewModel.init(_:))))
-            case .failure(let error):
-                self.onUpdate?(.failure(.unknown(error)))
+            case .failure:
+                fatalError("Unimplemented")
             }
         }
     }
 
-    func didSelectItem(at indexPath: IndexPath) {
-        showHeading?(headings[indexPath.row])
+    func selectItem(at indexPath: IndexPath) {
+        onSelect?(headings[indexPath.row])
     }
 }

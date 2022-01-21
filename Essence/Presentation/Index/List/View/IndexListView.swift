@@ -50,7 +50,7 @@ final class IndexListViewModelWrapper: ObservableObject {
             fatalError("Unknown item: \(item), in: \(items)")
         }
 
-        viewModel.didSelectItem(at: IndexPath(row: index, section: 0))
+        viewModel.selectItem(at: IndexPath(row: index, section: 0))
     }
 }
 

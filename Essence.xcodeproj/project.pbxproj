@@ -55,6 +55,7 @@
 		3DBF8A4725C5754300D4A280 /* RocketsContainerViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A4625C5754300D4A280 /* RocketsContainerViewControllerTest.swift */; };
 		3DC45A9C279620BB0008F393 /* StravaExperimentalFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45A9B279620BB0008F393 /* StravaExperimentalFlowFactory.swift */; };
 		3DC45A9E279621570008F393 /* StravaExperimentalFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45A9D279621570008F393 /* StravaExperimentalFlowCoordinator.swift */; };
+		3DC45AB9279B335B0008F393 /* IndexListControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45AB8279B335B0008F393 /* IndexListControllerTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		3DBF8A4625C5754300D4A280 /* RocketsContainerViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsContainerViewControllerTest.swift; sourceTree = "<group>"; };
 		3DC45A9B279620BB0008F393 /* StravaExperimentalFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaExperimentalFlowFactory.swift; sourceTree = "<group>"; };
 		3DC45A9D279621570008F393 /* StravaExperimentalFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaExperimentalFlowCoordinator.swift; sourceTree = "<group>"; };
+		3DC45AB8279B335B0008F393 /* IndexListControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexListControllerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 		3DAE43F7278E194500881980 /* Index */ = {
 			isa = PBXGroup;
 			children = (
+				3DC45AB8279B335B0008F393 /* IndexListControllerTest.swift */,
 				3DAE43F8278E196400881980 /* IndexListItemViewModelTest.swift */,
 			);
 			path = Index;
@@ -716,6 +719,7 @@
 				3DBF8A4725C5754300D4A280 /* RocketsContainerViewControllerTest.swift in Sources */,
 				3DBF8A0525C1EFA500D4A280 /* Rocket+Stub.swift in Sources */,
 				3DAE43FB278E22D500881980 /* RocketsTableViewCellTest.swift in Sources */,
+				3DC45AB9279B335B0008F393 /* IndexListControllerTest.swift in Sources */,
 				3DAE43FD278E262A00881980 /* RocketsListControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
