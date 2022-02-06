@@ -50,15 +50,15 @@ final class RocketsContainerViewControllerTest: XCTestCase {
 final class SpyRocketsListViewModel: RocketsListViewModelOutput {
     var onUpdate: ((RocketsListViewModelState) -> Void)?
 
-    var onAppearExecutionCount = 0
+    var viewDidLoadExecutionCount = 0
     var didSelectItemExecutionCount = 0
 }
 
 // MARK: RocketsListViewModelInput
 
 extension SpyRocketsListViewModel: RocketsListViewModelInput {
-    func onAppear() {
-        onAppearExecutionCount += 1
+    func viewDidLoad() {
+        viewDidLoadExecutionCount += 1
     }
 
     func selectItem(at _: IndexPath) {

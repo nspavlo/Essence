@@ -17,7 +17,7 @@ final class RocketsListControllerTest: XCTestCase {
         let sut = RocketsListController(repository: NonRespondingRocketsRepository())
         sut.onUpdate = { state = $0 }
 
-        sut.onAppear()
+        sut.viewDidLoad()
 
         XCTAssertEqual(state, .loading)
     }
@@ -27,7 +27,7 @@ final class RocketsListControllerTest: XCTestCase {
         let sut = RocketsListController(repository: LocalRocketsRepository())
         sut.onUpdate = { state = $0 }
 
-        sut.onAppear()
+        sut.viewDidLoad()
 
         guard case let .result(result) = state, let viewModels = try? result.get() else {
             XCTFail("Expected success, but was \(String(describing: state))")
@@ -40,9 +40,10 @@ final class RocketsListControllerTest: XCTestCase {
     func test_selection_whenFirstIndexSelected_shouldReturnFirstRocket() {
         var rocket: Rocket?
         let sut = RocketsListController(repository: LocalRocketsRepository())
-        sut.onSelect = { rocket = $0 }
+        sut.onUpdate = { _ in }
+        sut.showRocketDetails = { rocket = $0 }
 
-        sut.onAppear()
+        sut.viewDidLoad()
         sut.selectItem(at: IndexPath(row: 1, section: 0))
 
         XCTAssertEqual(rocket, .stub(id: "2"))

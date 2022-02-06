@@ -27,7 +27,7 @@ final class RocketsContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        viewModel.onAppear()
+        viewModel.viewDidLoad()
     }
 }
 
@@ -35,18 +35,18 @@ final class RocketsContainerViewController: UIViewController {
 
 private extension RocketsContainerViewController {
     func setup() {
-        setupUI()
+        setupViews()
         setupBindings()
     }
 
-    func setupUI() {
+    func setupViews() {
         title = .title
         view.backgroundColor = .systemBackground
     }
 
     func setupBindings() {
-        viewModel.onUpdate = { [weak self] in
-            self?.render($0)
+        viewModel.onUpdate = { [weak self] state in
+            self?.render(state)
         }
     }
 

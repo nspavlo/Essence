@@ -10,7 +10,7 @@ import Foundation
 // MARK: Input
 
 protocol RocketsListViewModelInput {
-    func onAppear()
+    func viewDidLoad()
     func selectItem(at indexPath: IndexPath)
 }
 
@@ -39,10 +39,10 @@ typealias RocketsListViewModel = RocketsListViewModelInput & RocketsListViewMode
 
 final class RocketsListController: RocketsListViewModelOutput {
     var onUpdate: ((RocketsListViewModelState) -> Void)?
-    var onSelect: ((Rocket) -> Void)?
+    var showRocketDetails: ((Rocket) -> Void)?
 
-    private var rockets: Rockets = []
     private let repository: RocketsRepository
+    private var items: Rockets = []
 
     init(repository: RocketsRepository) {
         self.repository = repository
@@ -52,23 +52,44 @@ final class RocketsListController: RocketsListViewModelOutput {
 // MARK: RocketsListViewModelInput
 
 extension RocketsListController: RocketsListViewModelInput {
-    func onAppear() {
-        onUpdate?(.loading)
-
-        repository.fetch { [weak self] result in
-            guard let self = self else { return }
-
-            switch result {
-            case .success(let rockets):
-                self.rockets = rockets
-                self.onUpdate?(.result(.success(rockets.map(RocketsListItemViewModel.init(_:)))))
-            case .failure(let error):
-                self.onUpdate?(.result(.failure(.unknown(error))))
-            }
+    func viewDidLoad() {
+        guard onUpdate != nil else {
+            fatalError("Assign `onUpdate` and then call `viewDidLoad`")
         }
+
+        onUpdate?(.loading)
+        fetchRocketsFromRepository()
     }
 
     func selectItem(at indexPath: IndexPath) {
-        onSelect?(rockets[indexPath.row])
+        showRocketDetails?(items[indexPath.row])
+    }
+}
+
+// MARK: Private Methods
+
+private extension RocketsListController {
+    func fetchRocketsFromRepository() {
+        repository.fetch { [weak self] result in
+            self?.storeItemsInMemory(with: result)
+            self?.updateListState(with: result)
+        }
+    }
+
+    func storeItemsInMemory(with result: Result<Rockets, RequestError>) {
+        switch result {
+        case .success(let items):
+            self.items = items
+        case .failure:
+            self.items = []
+        }
+    }
+
+    func updateListState(with result: Result<Rockets, RequestError>) {
+        let status = result
+            .map { $0.map(RocketsListItemViewModel.init(_:)) }
+            .mapError { RocketsListError.unknown($0) }
+
+        onUpdate?(.result(status))
     }
 }
