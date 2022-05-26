@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D3F878F27B015BC00142E0E /* XCTestCase+Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F878E27B015BC00142E0E /* XCTestCase+Memory.swift */; };
 		3D701BEB283FC03600BDF3D8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3D701BEA283FC03600BDF3D8 /* Alamofire */; };
 		3D988547273D907A00DD40EC /* IndexRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D988546273D907A00DD40EC /* IndexRepository.swift */; };
 		3D988549273D90ED00DD40EC /* Heading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D988548273D90ED00DD40EC /* Heading.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D3F878E27B015BC00142E0E /* XCTestCase+Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Memory.swift"; sourceTree = "<group>"; };
 		3D988546273D907A00DD40EC /* IndexRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexRepository.swift; sourceTree = "<group>"; };
 		3D988548273D90ED00DD40EC /* Heading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heading.swift; sourceTree = "<group>"; };
 		3D98854C273D91C600DD40EC /* IndexListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexListViewModel.swift; sourceTree = "<group>"; };
@@ -144,6 +146,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D3F878D27B0159B00142E0E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3D3F878E27B015BC00142E0E /* XCTestCase+Memory.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		3D988543273D8A7200DD40EC /* Index */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +265,7 @@
 		3DBF863A25BC1ED400D4A280 /* EssenceUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				3D3F878D27B0159B00142E0E /* Helpers */,
 				3DBF8A0125C1EF2700D4A280 /* Mocks */,
 				3DBF8A4225C5750300D4A280 /* Presentation */,
 				3DC45ABA279B38620008F393 /* Repositories */,
@@ -739,6 +750,7 @@
 				3DBF8A4725C5754300D4A280 /* RocketsContainerViewControllerTest.swift in Sources */,
 				3DBF8A0525C1EFA500D4A280 /* Rocket+Stub.swift in Sources */,
 				3DAE43FB278E22D500881980 /* RocketsTableViewCellTest.swift in Sources */,
+				3D3F878F27B015BC00142E0E /* XCTestCase+Memory.swift in Sources */,
 				3DC45AB9279B335B0008F393 /* IndexListControllerTest.swift in Sources */,
 				3DAE43FD278E262A00881980 /* RocketsListControllerTest.swift in Sources */,
 			);

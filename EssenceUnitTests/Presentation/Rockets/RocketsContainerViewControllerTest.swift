@@ -12,34 +12,42 @@ import XCTest
 // MARK: XCTestCase
 
 final class RocketsContainerViewControllerTest: XCTestCase {
-    func test_binding_withViewDidLoad_shouldExecuteOnAppearOnce() {
-        let viewModel = SpyRocketsListViewModel()
-        let sut = RocketsContainerViewController(viewModel: viewModel)
+    func test_binding_withViewDidLoad_shouldExecuteOnce() {
+        let (viewModel, sut) = createSystemComponents()
 
         // Trigger `viewDidLoad`
         _ = sut.view.bounds
 
-        XCTAssertEqual(viewModel.onAppearExecutionCount, 1)
+        XCTAssertEqual(viewModel.viewDidLoadExecutionCount, 1)
     }
 
     func test_binding_withViewDidLoad_shouldSubscribeForUpdates() {
-        let viewModel = SpyRocketsListViewModel()
-        let sut = RocketsContainerViewController(viewModel: viewModel)
+        let (viewModel, sut) = createSystemComponents()
 
-        // Trigger `viewDidLoad`
-        _ = sut.view.bounds
+        sut.viewDidLoad()
 
         XCTAssertNotNil(viewModel.onUpdate)
     }
 
     func test_binding_withViewDidLoad_shouldContainGivenTitle() {
-        let viewModel = SpyRocketsListViewModel()
-        let sut = RocketsContainerViewController(viewModel: viewModel)
+        let (_, sut) = createSystemComponents()
 
-        // Trigger `viewDidLoad`
-        _ = sut.view.bounds
+        sut.viewDidLoad()
 
         XCTAssertEqual(sut.title, "Rockets")
+    }
+}
+
+private extension RocketsContainerViewControllerTest {
+    func createSystemComponents(
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> (SpyRocketsListViewModel, RocketsContainerViewController) {
+        let viewModel = SpyRocketsListViewModel()
+        trackForMemoryLeaks(viewModel, file: file, line: line)
+        let sut = RocketsContainerViewController(viewModel: viewModel)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return (viewModel, sut)
     }
 }
 
