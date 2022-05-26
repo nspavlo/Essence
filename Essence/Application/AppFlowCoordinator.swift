@@ -5,7 +5,7 @@
 //  Created by Jans Pavlovs on 23/01/2021.
 //
 
-import UIKit
+import Foundation
 
 // MARK: Initialization
 
