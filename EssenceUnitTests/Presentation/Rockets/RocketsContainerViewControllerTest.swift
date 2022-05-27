@@ -46,6 +46,8 @@ final class RocketsContainerViewControllerTest: XCTestCase {
     }
 }
 
+// MARK: Factory
+
 private extension RocketsContainerViewControllerTest {
     func createSystemComponents(
         file: StaticString = #file,
