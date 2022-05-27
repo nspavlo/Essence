@@ -26,6 +26,7 @@ enum RocketsListViewModelState {
 }
 
 protocol RocketsListViewModelOutput: AnyObject {
+    var title: String { get }
     var onUpdate: ((RocketsListViewModelState) -> Void)? { get set }
 }
 
@@ -38,6 +39,7 @@ typealias RocketsListViewModel = RocketsListViewModelInput & RocketsListViewMode
 // MARK: Initialization
 
 final class RocketsListController: RocketsListViewModelOutput {
+    var title: String { "Rockets" }
     var onUpdate: ((RocketsListViewModelState) -> Void)?
     var showRocketDetails: ((Rocket) -> Void)?
 

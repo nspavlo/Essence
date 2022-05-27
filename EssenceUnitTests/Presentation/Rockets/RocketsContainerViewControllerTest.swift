@@ -30,11 +30,11 @@ final class RocketsContainerViewControllerTest: XCTestCase {
     }
 
     func test_binding_withViewDidLoad_shouldContainGivenTitle() {
-        let (_, sut) = createSystemComponents()
+        let (viewModel, sut) = createSystemComponents()
 
         sut.viewDidLoad()
 
-        XCTAssertEqual(sut.title, "Rockets")
+        XCTAssertEqual(sut.title, viewModel.title)
     }
 }
 
@@ -56,6 +56,7 @@ private extension RocketsContainerViewControllerTest {
 // MARK: Initialization
 
 final class SpyRocketsListViewModel: RocketsListViewModelOutput {
+    var title: String { "Test" }
     var onUpdate: ((RocketsListViewModelState) -> Void)?
 
     var viewDidLoadExecutionCount = 0

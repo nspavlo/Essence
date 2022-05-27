@@ -40,7 +40,7 @@ private extension RocketsContainerViewController {
     }
 
     func setupViews() {
-        title = .title
+        title = viewModel.title
         view.backgroundColor = .systemBackground
     }
 
@@ -80,12 +80,4 @@ private extension RocketsContainerViewController {
         let viewController = ErrorViewController(error: error)
         replaceExisting(with: viewController, in: view)
     }
-}
-
-// MARK: Locale
-
-private typealias Locale = String
-
-private extension Locale {
-    static let title = "Rockets"
 }
