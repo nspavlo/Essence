@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// MARK: - View
+// MARK: View
 
 struct IndexListView: View {
     @ObservedObject
@@ -26,7 +26,7 @@ struct IndexListView: View {
     }
 }
 
-// MARK: - Wrapper
+// MARK: Wrapper
 
 final class IndexListViewModelWrapper: ObservableObject {
     private let viewModel: IndexListViewModel
