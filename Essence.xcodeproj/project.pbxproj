@@ -146,6 +146,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D38FA63286064F40083B8A9 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		3D3F878D27B0159B00142E0E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,18 +164,10 @@
 		3D988543273D8A7200DD40EC /* Index */ = {
 			isa = PBXGroup;
 			children = (
-				3D988544273D8A8B00DD40EC /* Flows */,
 				3D988545273D8A9200DD40EC /* List */,
-			);
-			path = Index;
-			sourceTree = "<group>";
-		};
-		3D988544273D8A8B00DD40EC /* Flows */ = {
-			isa = PBXGroup;
-			children = (
 				3D988556273D97F700DD40EC /* IndexFlowCoordinator.swift */,
 			);
-			path = Flows;
+			path = Index;
 			sourceTree = "<group>";
 		};
 		3D988545273D8A9200DD40EC /* List */ = {
@@ -321,18 +320,11 @@
 		3DBF869025BC296B00D4A280 /* Rockets */ = {
 			isa = PBXGroup;
 			children = (
-				3DBF869325BC29AB00D4A280 /* Flows */,
+				3D38FA63286064F40083B8A9 /* Details */,
 				3DBF869C25BC2A6600D4A280 /* List */,
-			);
-			path = Rockets;
-			sourceTree = "<group>";
-		};
-		3DBF869325BC29AB00D4A280 /* Flows */ = {
-			isa = PBXGroup;
-			children = (
 				3DBF869425BC29DF00D4A280 /* RocketsFlowCoordinator.swift */,
 			);
-			path = Flows;
+			path = Rockets;
 			sourceTree = "<group>";
 		};
 		3DBF869C25BC2A6600D4A280 /* List */ = {
@@ -356,8 +348,8 @@
 		3DBF869F25BC2B0D00D4A280 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3DBF86F925BC5FD700D4A280 /* RocketsTableViewCell.swift */,
 				3DBF86B225BC395F00D4A280 /* RocketsContainerViewController.swift */,
+				3DBF86F925BC5FD700D4A280 /* RocketsTableViewCell.swift */,
 				3DBF86D125BC514200D4A280 /* RocketsTableViewController.swift */,
 			);
 			path = View;
@@ -538,17 +530,9 @@
 			isa = PBXGroup;
 			children = (
 				3DC45A9827961FE10008F393 /* Authentication */,
-				3DC45A9727961FC60008F393 /* Flows */,
-			);
-			path = Strava;
-			sourceTree = "<group>";
-		};
-		3DC45A9727961FC60008F393 /* Flows */ = {
-			isa = PBXGroup;
-			children = (
 				3DC45A9D279621570008F393 /* StravaExperimentalFlowCoordinator.swift */,
 			);
-			path = Flows;
+			path = Strava;
 			sourceTree = "<group>";
 		};
 		3DC45A9827961FE10008F393 /* Authentication */ = {
