@@ -33,7 +33,13 @@ extension AFRequestDispatcher: RequestDispatcher {
             let result = response.result.mapError { RequestError.underlying($0 as Error) }
             completion(result)
         }
+    }
+}
 
-        return nil
+// MARK: Cancelable
+
+extension DataRequest: Cancellable {
+    func cancel() {
+        _ = super.cancel()
     }
 }
