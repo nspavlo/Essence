@@ -46,7 +46,7 @@ final class RocketsListControllerTest: XCTestCase {
         sut.viewDidLoad()
         sut.selectItem(at: IndexPath(row: 1, section: 0))
 
-        XCTAssertEqual(rocket, .stub(id: "2"))
+        XCTAssertEqual(rocket, .stub(id: "1"))
     }
 }
 
@@ -67,8 +67,8 @@ final class LocalRocketsRepository: RocketsRepository {
         with completion: @escaping (Result<Rockets, RequestError>) -> Void
     ) -> Cancellable? {
         let rockets: Rockets = [
-            .stub(id: "1"),
-            .stub(id: "2")
+            .stub(id: "0"),
+            .stub(id: "1")
         ]
         completion(.success(rockets))
         return nil
