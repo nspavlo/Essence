@@ -22,7 +22,7 @@ final class RocketsListControllerTest: XCTestCase {
         XCTAssertEqual(state, .loading)
     }
 
-    func test_onAppear_withNonEmptyRepository_shouldReturnNonEmptySuccess() {
+    func test_onAppear_withNonEmptyRepository_shouldReturnSuccess() {
         var state: RocketsListViewModelState?
         let sut = RocketsListController(repository: LocalRocketsRepository())
         sut.onUpdate = { state = $0 }
