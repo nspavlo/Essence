@@ -13,16 +13,16 @@ import XCTest
 
 final class IndexListItemViewModelTest: XCTestCase {
     func test_equality_withNonMatchingTitle_shouldNotBeEqual() {
-        let a = IndexListItemViewModel(title: "Index")
-        let b = IndexListItemViewModel(title: "Rockets")
+        let lhs = IndexListItemViewModel(title: "Index")
+        let rhs = IndexListItemViewModel(title: "Rockets")
 
-        XCTAssertNotEqual(a, b)
+        XCTAssertNotEqual(lhs, rhs)
     }
 
     func test_equality_withMatchingTitle_shouldBeEqual() {
-        let a = IndexListItemViewModel(title: "Index")
-        let b = IndexListItemViewModel(title: "Index")
+        let lhs = IndexListItemViewModel(title: "Index")
+        let rhs = IndexListItemViewModel(title: "Index")
 
-        XCTAssertEqual(a, b)
+        XCTAssertEqual(lhs, rhs)
     }
 }
