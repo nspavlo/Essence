@@ -6,6 +6,20 @@
 	objectVersion = 52;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3D8877802887EB0200FCDE97 /* Periphery */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3D8877812887EB0200FCDE97 /* Build configuration list for PBXAggregateTarget "Periphery" */;
+			buildPhases = (
+				3D8877842887EB0F00FCDE97 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Periphery;
+			productName = Periphery;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3D3F878F27B015BC00142E0E /* XCTestCase+Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F878E27B015BC00142E0E /* XCTestCase+Memory.swift */; };
 		3D701BEE2841255100BDF3D8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3D701BED2841255100BDF3D8 /* Alamofire */; };
@@ -626,6 +640,9 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					3D8877802887EB0200FCDE97 = {
+						CreatedOnToolsVersion = 14.0;
+					};
 					3DBF862025BC1ED300D4A280 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -654,6 +671,7 @@
 			targets = (
 				3DBF862025BC1ED300D4A280 /* Essence */,
 				3DBF863625BC1ED400D4A280 /* EssenceUnitTests */,
+				3D8877802887EB0200FCDE97 /* Periphery */,
 			);
 		};
 /* End PBXProject section */
@@ -676,6 +694,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D8877842887EB0F00FCDE97 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nperiphery scan --project Essence.xcodeproj --schemes Essence --targets Essence --format xcode\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DBF861D25BC1ED300D4A280 /* Sources */ = {
@@ -762,6 +800,24 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3D8877822887EB0200FCDE97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JPE45M57J4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3D8877832887EB0200FCDE97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JPE45M57J4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3DBF864925BC1ED400D4A280 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -968,6 +1024,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3D8877812887EB0200FCDE97 /* Build configuration list for PBXAggregateTarget "Periphery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D8877822887EB0200FCDE97 /* Debug */,
+				3D8877832887EB0200FCDE97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		3DBF861C25BC1ED300D4A280 /* Build configuration list for PBXProject "Essence" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
