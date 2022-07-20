@@ -24,29 +24,31 @@ final class RocketsListControllerTest: XCTestCase {
 
     func test_onAppear_withNonEmptyRepository_shouldReturnSuccess() {
         var state: RocketsListViewModelState?
-        let sut = RocketsListController(repository: LocalRocketsRepository())
+        let rockets: Rockets = [.stub(id: "1"), .stub(id: "2")]
+        let sut = RocketsListController(repository: LocalRocketsRepository(rockets: rockets))
         sut.onUpdate = { state = $0 }
 
         sut.viewDidLoad()
 
-        guard case let .result(result) = state, let viewModels = try? result.get() else {
+        if case let .result(result) = state, let viewModels = try? result.get() {
+            XCTAssertEqual(viewModels.count, rockets.count)
+        } else {
             XCTFail("Expected success, but was \(String(describing: state))")
-            return
         }
-
-        XCTAssertEqual(viewModels.count, 2)
     }
 
     func test_selection_whenFirstIndexSelected_shouldReturnFirstRocket() {
         var rocket: Rocket?
-        let sut = RocketsListController(repository: LocalRocketsRepository())
+        let rockets: Rockets = [.stub(id: "1"), .stub(id: "2")]
+        let index = 1
+        let sut = RocketsListController(repository: LocalRocketsRepository(rockets: rockets))
         sut.onUpdate = { _ in }
         sut.showRocketDetails = { rocket = $0 }
 
         sut.viewDidLoad()
-        sut.selectItem(at: IndexPath(row: 1, section: 0))
+        sut.selectItem(at: IndexPath(row: index, section: 0))
 
-        XCTAssertEqual(rocket, .stub(id: "1"))
+        XCTAssertEqual(rocket, rockets[index])
     }
 }
 
@@ -63,13 +65,15 @@ final class NonRespondingRocketsRepository: RocketsRepository {
 }
 
 final class LocalRocketsRepository: RocketsRepository {
+    private let rockets: Rockets
+
+    init(rockets: Rockets) {
+        self.rockets = rockets
+    }
+
     func fetch(
         with completion: @escaping (Result<Rockets, RequestError>) -> Void
     ) -> Cancellable? {
-        let rockets: Rockets = [
-            .stub(id: "0"),
-            .stub(id: "1")
-        ]
         completion(.success(rockets))
         return nil
     }

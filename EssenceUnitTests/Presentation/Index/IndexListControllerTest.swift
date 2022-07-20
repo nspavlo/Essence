@@ -24,22 +24,25 @@ final class IndexListControllerTest: XCTestCase {
 
     func test_onAppear_withNonEmptyRepository_shouldReturnNonEmptySuccess() {
         var result: Result<IndexListItemViewModels, IndexListError>?
-        let sut = IndexListController(repository: LocalIndexRepository(headings: [.strava]))
+        let heading: Heading = .strava
+        let sut = IndexListController(repository: LocalIndexRepository(headings: [heading]))
         sut.onUpdate = { result = $0 }
 
         sut.onAppear()
 
-        XCTAssertEqual(try? result?.get(), [IndexListItemViewModel(.strava)])
+        XCTAssertEqual(try? result?.get(), [IndexListItemViewModel(heading)])
     }
 
     func test_selection_whenFirstIndexSelected_shouldReturnFirstHeading() {
         var heading: Heading?
-        let sut = IndexListController(repository: LocalIndexRepository(headings: [.rockets, .strava]))
+        let headings: Headings = [.rockets, .strava]
+        let index = 1
+        let sut = IndexListController(repository: LocalIndexRepository(headings: headings))
         sut.onSelect = { heading = $0 }
 
         sut.onAppear()
-        sut.selectItem(at: IndexPath(row: 1, section: 0))
+        sut.selectItem(at: IndexPath(row: index, section: 0))
 
-        XCTAssertEqual(heading, .strava)
+        XCTAssertEqual(heading, headings[index])
     }
 }
