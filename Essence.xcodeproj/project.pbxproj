@@ -160,13 +160,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3D38FA63286064F40083B8A9 /* Details */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Details;
-			sourceTree = "<group>";
-		};
 		3D3F878D27B0159B00142E0E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,7 +327,6 @@
 		3DBF869025BC296B00D4A280 /* Rockets */ = {
 			isa = PBXGroup;
 			children = (
-				3D38FA63286064F40083B8A9 /* Details */,
 				3DBF869C25BC2A6600D4A280 /* List */,
 				3DBF869425BC29DF00D4A280 /* RocketsFlowCoordinator.swift */,
 			);
@@ -543,33 +535,9 @@
 		3DC45A9627961F5C0008F393 /* Strava */ = {
 			isa = PBXGroup;
 			children = (
-				3DC45A9827961FE10008F393 /* Authentication */,
 				3DC45A9D279621570008F393 /* StravaExperimentalFlowCoordinator.swift */,
 			);
 			path = Strava;
-			sourceTree = "<group>";
-		};
-		3DC45A9827961FE10008F393 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				3DC45A9927961FFA0008F393 /* View */,
-				3DC45A9A27961FFF0008F393 /* ViewModel */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
-		3DC45A9927961FFA0008F393 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		3DC45A9A27961FFF0008F393 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3DC45ABA279B38620008F393 /* Repositories */ = {
