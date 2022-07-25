@@ -30,7 +30,7 @@ protocol RocketsListViewModelOutput: AnyObject {
     var onUpdate: ((RocketsListViewModelState) -> Void)? { get set }
 }
 
-// MARK: Protocol
+// MARK: Type Aliases
 
 typealias RocketsListViewModel = RocketsListViewModelInput & RocketsListViewModelOutput
 

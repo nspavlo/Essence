@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: Type Aliases
+
 typealias IndexListItemViewModels = [IndexListItemViewModel]
 
 // MARK: Initialization

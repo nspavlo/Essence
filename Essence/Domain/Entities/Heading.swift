@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: Type Aliases
+
 typealias Headings = [Heading]
 
 // MARK: Initialization

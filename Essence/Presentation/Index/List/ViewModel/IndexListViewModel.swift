@@ -24,7 +24,7 @@ protocol IndexListViewModelOutput: AnyObject {
     var onUpdate: ((Result<IndexListItemViewModels, IndexListError>) -> Void)? { get set }
 }
 
-// MARK: Protocol
+// MARK: Type Aliases
 
 typealias IndexListViewModel = IndexListViewModelInput & IndexListViewModelOutput
 
