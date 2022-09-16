@@ -10,9 +10,7 @@ import Foundation
 // MARK: Initialization
 
 final class AppFlowFactory {
-    lazy var dispatcher: RequestDispatcher = {
-        AFRequestDispatcher(environment: .development)
-    }()
+    lazy var dispatcher: RequestDispatcher = AFRequestDispatcher(environment: .development)
 }
 
 // MARK: -
