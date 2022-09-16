@@ -20,10 +20,6 @@ final class RocketsTableViewCell: UITableViewCell {
     }
 }
 
-// MARK: Reusable
-
-extension RocketsTableViewCell: Reusable {}
-
 // MARK: Configuration
 
 extension RocketsTableViewCell {
