@@ -24,8 +24,10 @@ final class RocketsTableViewCell: UITableViewCell {
 
 extension RocketsTableViewCell {
     func configure(with viewModel: RocketsListItemViewModel) {
-        textLabel?.text = viewModel.title
-        detailTextLabel?.text = viewModel.subtitle
+        var content = defaultContentConfiguration()
+        content.text = viewModel.title
+        content.secondaryText = viewModel.subtitle
+        contentConfiguration = content
         accessoryType = .disclosureIndicator
     }
 }
