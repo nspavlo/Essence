@@ -21,12 +21,12 @@ final class LocalIndexRepositoryTest: XCTestCase {
         XCTAssertEqual(try? result?.get(), [])
     }
 
-    func test_repository_withStravaHeading_shouldReturnStravaHeading() {
+    func test_repository_withRocketsHeading_shouldReturnRocketsHeading() {
         var result: Result<Headings, RequestError>?
-        let sut = LocalIndexRepository(headings: [.strava])
+        let sut = LocalIndexRepository(headings: [.rockets])
 
         _ = sut.fetch { result = $0 }
 
-        XCTAssertEqual(try? result?.get(), [.strava])
+        XCTAssertEqual(try? result?.get(), [.rockets])
     }
 }

@@ -14,8 +14,8 @@ typealias Headings = [Heading]
 // MARK: Initialization
 
 enum Heading: String {
+    case rocketsLegacy = "SpaceX (Legacy)"
     case rockets = "SpaceX"
-    case strava = "STRAVA"
 }
 
 // MARK: Public

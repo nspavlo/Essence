@@ -24,7 +24,7 @@ final class IndexListControllerTest: XCTestCase {
 
     func test_onAppear_withNonEmptyRepository_shouldReturnNonEmptySuccess() {
         var result: Result<IndexListItemViewModels, IndexListError>?
-        let heading: Heading = .strava
+        let heading: Heading = .rockets
         let sut = IndexListController(repository: LocalIndexRepository(headings: [heading]))
         sut.onUpdate = { result = $0 }
 
@@ -35,7 +35,7 @@ final class IndexListControllerTest: XCTestCase {
 
     func test_selection_whenFirstIndexSelected_shouldReturnFirstHeading() {
         var heading: Heading?
-        let headings: Headings = [.rockets, .strava]
+        let headings: Headings = [.rocketsLegacy, .rockets]
         let index = 1
         let sut = IndexListController(repository: LocalIndexRepository(headings: headings))
         sut.onSelect = { heading = $0 }

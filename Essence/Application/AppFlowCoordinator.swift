@@ -46,12 +46,6 @@ private extension AppFlowCoordinator {
         let rocketsFlowCoordinator = rocketsFlowFactory.createRocketsFlowCoordinator(with: router)
         rocketsFlowCoordinator.start(animated: !coordinators.isEmpty)
     }
-
-    func startStravaExperimentalFlow() {
-        let stravaFlowFactory = appFlowFactory.createStravaExperimentalFlowFactory()
-        let stravaFlowCoordinator = stravaFlowFactory.createStravaExperimentalFlowCoordinator(with: router)
-        stravaFlowCoordinator.start(animated: !coordinators.isEmpty)
-    }
 }
 
 // MARK: Adapters
@@ -59,10 +53,9 @@ private extension AppFlowCoordinator {
 private extension AppFlowCoordinator {
     func startAppropriateFlow(for heading: Heading) {
         switch heading {
-        case .rockets:
+        case .rocketsLegacy,
+             .rockets:
             startRocketsFlow()
-        case .strava:
-            startStravaExperimentalFlow()
         }
     }
 }

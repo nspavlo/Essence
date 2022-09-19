@@ -66,8 +66,6 @@
 		3DBF8A1B25C55E8500D4A280 /* RemoteRocketsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A1A25C55E8500D4A280 /* RemoteRocketsRepository.swift */; };
 		3DBF8A2225C5624300D4A280 /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A2125C5624300D4A280 /* NavigationRouter.swift */; };
 		3DBF8A4725C5754300D4A280 /* RocketsContainerViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DBF8A4625C5754300D4A280 /* RocketsContainerViewControllerTest.swift */; };
-		3DC45A9C279620BB0008F393 /* StravaExperimentalFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45A9B279620BB0008F393 /* StravaExperimentalFlowFactory.swift */; };
-		3DC45A9E279621570008F393 /* StravaExperimentalFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45A9D279621570008F393 /* StravaExperimentalFlowCoordinator.swift */; };
 		3DC45AB9279B335B0008F393 /* IndexListControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45AB8279B335B0008F393 /* IndexListControllerTest.swift */; };
 		3DC45ABD279B39260008F393 /* LocalIndexRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45ABC279B39260008F393 /* LocalIndexRepositoryTest.swift */; };
 		3DDDB61D28D5036700FB76BD /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 3DDDB61C28D5036700FB76BD /* Reusable */; };
@@ -133,8 +131,6 @@
 		3DBF8A1A25C55E8500D4A280 /* RemoteRocketsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteRocketsRepository.swift; sourceTree = "<group>"; };
 		3DBF8A2125C5624300D4A280 /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		3DBF8A4625C5754300D4A280 /* RocketsContainerViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketsContainerViewControllerTest.swift; sourceTree = "<group>"; };
-		3DC45A9B279620BB0008F393 /* StravaExperimentalFlowFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaExperimentalFlowFactory.swift; sourceTree = "<group>"; };
-		3DC45A9D279621570008F393 /* StravaExperimentalFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StravaExperimentalFlowCoordinator.swift; sourceTree = "<group>"; };
 		3DC45AB8279B335B0008F393 /* IndexListControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexListControllerTest.swift; sourceTree = "<group>"; };
 		3DC45ABC279B39260008F393 /* LocalIndexRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalIndexRepositoryTest.swift; sourceTree = "<group>"; };
 		3DDDB61E28D5039400FB76BD /* RocketsTableViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketsTableViewCell+Reusable.swift"; sourceTree = "<group>"; };
@@ -297,7 +293,6 @@
 				3DBF867C25BC23CA00D4A280 /* AppFlowFactory.swift */,
 				3D988550273D959500DD40EC /* IndexFlowFactory.swift */,
 				3DBF868925BC280300D4A280 /* RocketsFlowFactory.swift */,
-				3DC45A9B279620BB0008F393 /* StravaExperimentalFlowFactory.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -319,7 +314,6 @@
 				3DBF86BC25BC44D600D4A280 /* Extensions */,
 				3D988543273D8A7200DD40EC /* Index */,
 				3DBF869025BC296B00D4A280 /* Rockets */,
-				3DC45A9627961F5C0008F393 /* Strava */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -523,14 +517,6 @@
 			path = Rockets;
 			sourceTree = "<group>";
 		};
-		3DC45A9627961F5C0008F393 /* Strava */ = {
-			isa = PBXGroup;
-			children = (
-				3DC45A9D279621570008F393 /* StravaExperimentalFlowCoordinator.swift */,
-			);
-			path = Strava;
-			sourceTree = "<group>";
-		};
 		3DC45ABA279B38620008F393 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -685,7 +671,6 @@
 				3DBF874A25BD8ED500D4A280 /* Endpoint.swift in Sources */,
 				3DBF86BE25BC44E700D4A280 /* UIViewController+Embed.swift in Sources */,
 				3DBF89F825C1EC2A00D4A280 /* Router.swift in Sources */,
-				3DC45A9E279621570008F393 /* StravaExperimentalFlowCoordinator.swift in Sources */,
 				3DBF874E25BD8F2D00D4A280 /* Request+Endpoint.swift in Sources */,
 				3DBF86AB25BC2C4300D4A280 /* Rocket.swift in Sources */,
 				3DBF86C825BC491400D4A280 /* ErrorViewController.swift in Sources */,
@@ -710,7 +695,6 @@
 				3D98855C273ED56E00DD40EC /* UseCase.swift in Sources */,
 				3DDDB61F28D5039400FB76BD /* RocketsTableViewCell+Reusable.swift in Sources */,
 				3DBF89FC25C1EC4B00D4A280 /* Coordinator.swift in Sources */,
-				3DC45A9C279620BB0008F393 /* StravaExperimentalFlowFactory.swift in Sources */,
 				3DBF86D225BC514200D4A280 /* RocketsTableViewController.swift in Sources */,
 				3DBF870325BC68A400D4A280 /* RocketsRepository.swift in Sources */,
 				3DBF8A1B25C55E8500D4A280 /* RemoteRocketsRepository.swift in Sources */,
