@@ -25,7 +25,16 @@ final class IndexFlowCoordinator {
 
 extension IndexFlowCoordinator: Coordinator {
     func start(animated: Bool) {
-        showIndexList(animated: animated)
+        start(with: .index, animated: animated)
+    }
+
+    func start(with link: Link, animated: Bool) {
+        switch link {
+        case .rocket:
+            fatalError("Unable to start \(self) with \(link)")
+        case .index:
+            showIndexList(animated: animated)
+        }
     }
 }
 

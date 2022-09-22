@@ -24,7 +24,16 @@ final class AppFlowCoordinator {
 
 extension AppFlowCoordinator: Coordinator {
     func start(animated: Bool) {
-        startIndexFlow(animated: animated)
+        startIndexFlow(animated: false)
+    }
+
+    func start(with link: Link, animated: Bool) {
+        switch link {
+        case .index:
+            startIndexFlow(animated: animated)
+        case .rocket:
+            startRocketsFlow(with: link, animated: animated)
+        }
     }
 }
 
@@ -41,10 +50,10 @@ private extension AppFlowCoordinator {
         coordinators = [indexFlowCoordinator]
     }
 
-    func startRocketsFlow() {
+    func startRocketsFlow(with link: Link, animated: Bool) {
         let rocketsFlowFactory = appFlowFactory.createRocketsFlowFactory()
         let rocketsFlowCoordinator = rocketsFlowFactory.createRocketsFlowCoordinator(with: router)
-        rocketsFlowCoordinator.start(animated: !coordinators.isEmpty)
+        rocketsFlowCoordinator.start(with: link, animated: animated)
     }
 }
 
@@ -55,7 +64,7 @@ private extension AppFlowCoordinator {
         switch heading {
         case .rocketsLegacy,
              .rockets:
-            startRocketsFlow()
+            startRocketsFlow(with: .rocket(nil), animated: !coordinators.isEmpty)
         }
     }
 }
