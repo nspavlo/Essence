@@ -37,7 +37,7 @@ final class RocketsContainerViewControllerTest: XCTestCase {
         XCTAssertEqual(sut.title, viewModel.title)
     }
 
-    func test_binding_withViewDidLoad_shouldContainGivenBackgrounColor() {
+    func test_binding_withViewDidLoad_shouldContainGivenBackgroundColor() {
         let (_, sut) = createSystemComponents()
 
         sut.viewDidLoad()
