@@ -15,13 +15,19 @@ final class RocketsTableViewCellTest: XCTestCase {
     func test_init_withoutItemViewModel_shouldContainEmptyTitle() {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
 
-        XCTAssertNil(sut.textLabel?.text)
+        XCTAssertNil(sut.listContentConfiguration?.text)
     }
 
     func test_init_withoutItemViewModel_shouldContainEmptySubtitle() {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
 
-        XCTAssertNil(sut.detailTextLabel?.text)
+        XCTAssertNil(sut.listContentConfiguration?.secondaryText)
+    }
+    
+    func test_init_withoutItemViewModel_shouldContainAccessoryTypeNone() {
+        let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
+
+        XCTAssertEqual(sut.accessoryType, .none)
     }
 
     func test_configure_withItemViewModel_shouldContainGivenTitle() {
@@ -29,8 +35,8 @@ final class RocketsTableViewCellTest: XCTestCase {
         let viewModel = RocketsListItemViewModel(title: "Index", subtitle: "Latvia")
 
         sut.configure(with: viewModel)
-
-        XCTAssertEqual(sut.textLabel?.text, viewModel.title)
+        
+        XCTAssertEqual(sut.listContentConfiguration?.text, viewModel.title)
     }
 
     func test_configure_withItemViewModel_shouldContainGivenSubtitle() {
@@ -39,6 +45,23 @@ final class RocketsTableViewCellTest: XCTestCase {
 
         sut.configure(with: viewModel)
 
-        XCTAssertEqual(sut.detailTextLabel?.text, viewModel.subtitle)
+        XCTAssertEqual(sut.listContentConfiguration?.secondaryText, viewModel.subtitle)
+    }
+    
+    func test_configure_withItemViewModel_shouldContainAccessoryTypeDisclosureIndicator() {
+        let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
+        let viewModel = RocketsListItemViewModel(title: "Index", subtitle: "Latvia")
+
+        sut.configure(with: viewModel)
+
+        XCTAssertEqual(sut.accessoryType, .disclosureIndicator)
+    }
+}
+
+// MARK: UIListContentConfiguration
+
+private extension RocketsTableViewCell {
+    var listContentConfiguration: UIListContentConfiguration? {
+        contentConfiguration as? UIListContentConfiguration
     }
 }
