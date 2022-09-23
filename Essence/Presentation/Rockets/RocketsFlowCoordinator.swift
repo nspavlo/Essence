@@ -23,7 +23,21 @@ final class RocketsFlowCoordinator {
 
 extension RocketsFlowCoordinator: Coordinator {
     func start(animated: Bool) {
-        showRocketsList(animated: animated)
+        start(with: .rocket(nil), animated: animated)
+    }
+
+    func start(with link: Link, animated: Bool) {
+        switch link {
+        case .index:
+            fatalError("Unable to start \(self) with \(link)")
+        case .rocket(let rocket):
+            if let rocket {
+                showRocketDetails(with: rocket, animated: animated)
+            } else {
+                showRocketsList(animated: animated)
+            }
+
+        }
     }
 }
 
@@ -34,7 +48,7 @@ private extension RocketsFlowCoordinator {
         let repository = rocketsFlowFactory.createRocketsRepository()
         let viewModel = RocketsListController(repository: repository)
         viewModel.showRocketDetails = { rocket in
-            self.showRocketDetails(with: rocket, animated: true)
+            self.start(with: .rocket(rocket), animated: true)
         }
         let viewController = RocketsContainerViewController(viewModel: viewModel)
         router.push(viewController, animated: animated)
