@@ -70,6 +70,7 @@
 		3DC45ABD279B39260008F393 /* LocalIndexRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC45ABC279B39260008F393 /* LocalIndexRepositoryTest.swift */; };
 		3DDDB61D28D5036700FB76BD /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = 3DDDB61C28D5036700FB76BD /* Reusable */; };
 		3DDDB61F28D5039400FB76BD /* RocketsTableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDB61E28D5039400FB76BD /* RocketsTableViewCell+Reusable.swift */; };
+		B7B08B5228DEEA6F00A5A9CD /* RocketsListItemViewModel+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B08B5128DEEA6F00A5A9CD /* RocketsListItemViewModel+Stub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +135,7 @@
 		3DC45AB8279B335B0008F393 /* IndexListControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexListControllerTest.swift; sourceTree = "<group>"; };
 		3DC45ABC279B39260008F393 /* LocalIndexRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalIndexRepositoryTest.swift; sourceTree = "<group>"; };
 		3DDDB61E28D5039400FB76BD /* RocketsTableViewCell+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketsTableViewCell+Reusable.swift"; sourceTree = "<group>"; };
+		B7B08B5128DEEA6F00A5A9CD /* RocketsListItemViewModel+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RocketsListItemViewModel+Stub.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -456,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				3DBF8A0425C1EFA500D4A280 /* Rocket+Stub.swift */,
+				B7B08B5128DEEA6F00A5A9CD /* RocketsListItemViewModel+Stub.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -738,6 +741,7 @@
 				3DAE43FB278E22D500881980 /* RocketsTableViewCellTest.swift in Sources */,
 				3D3F878F27B015BC00142E0E /* XCTestCase+Memory.swift in Sources */,
 				3DC45AB9279B335B0008F393 /* IndexListControllerTest.swift in Sources */,
+				B7B08B5228DEEA6F00A5A9CD /* RocketsListItemViewModel+Stub.swift in Sources */,
 				3DAE43FD278E262A00881980 /* RocketsListControllerTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,7 +32,7 @@ final class RocketsTableViewCellTest: XCTestCase {
 
     func test_configure_withItemViewModel_shouldContainGivenTitle() {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
-        let viewModel = RocketsListItemViewModel(title: "Index", subtitle: "Latvia")
+        let viewModel: RocketsListItemViewModel = .stub()
 
         sut.configure(with: viewModel)
 
@@ -41,7 +41,7 @@ final class RocketsTableViewCellTest: XCTestCase {
 
     func test_configure_withItemViewModel_shouldContainGivenSubtitle() {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
-        let viewModel = RocketsListItemViewModel(title: "Index", subtitle: "Latvia")
+        let viewModel: RocketsListItemViewModel = .stub()
 
         sut.configure(with: viewModel)
 
@@ -50,7 +50,7 @@ final class RocketsTableViewCellTest: XCTestCase {
 
     func test_configure_withItemViewModel_shouldContainAccessoryTypeDisclosureIndicator() {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
-        let viewModel = RocketsListItemViewModel(title: "Index", subtitle: "Latvia")
+        let viewModel: RocketsListItemViewModel = .stub()
 
         sut.configure(with: viewModel)
 
