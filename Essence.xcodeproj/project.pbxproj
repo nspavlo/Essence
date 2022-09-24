@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -543,6 +543,7 @@
 				3DBF861D25BC1ED300D4A280 /* Sources */,
 				3DBF861E25BC1ED300D4A280 /* Frameworks */,
 				3DBF861F25BC1ED300D4A280 /* Resources */,
+				B7B08B5028DEE58700A5A9CD /* Linter */,
 			);
 			buildRules = (
 			);
@@ -659,6 +660,25 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nperiphery scan --project Essence.xcodeproj --schemes Essence --targets Essence --format xcode\n";
+		};
+		B7B08B5028DEE58700A5A9CD /* Linter */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Linter;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which mint > /dev/null; then\n  xcrun --sdk macosx mint run swiftlint swiftlint autocorrect --format\n  xcrun --sdk macosx mint run swiftlint swiftlint\nelse\n  echo \"warning: Linter not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
