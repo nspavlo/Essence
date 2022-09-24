@@ -55,8 +55,8 @@ extension IndexListController: IndexListViewModelInput {
             case .success(let headings):
                 self.headings = headings
                 self.onUpdate?(.success(headings.map(IndexListItemViewModel.init(_:))))
-            case .failure:
-                fatalError("Unimplemented")
+            case .failure(let error):
+                self.onUpdate?(.failure(.unknown(error)))
             }
         }
     }

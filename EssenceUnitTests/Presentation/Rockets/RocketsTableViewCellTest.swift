@@ -23,7 +23,7 @@ final class RocketsTableViewCellTest: XCTestCase {
 
         XCTAssertNil(sut.listContentConfiguration?.secondaryText)
     }
-    
+
     func test_init_withoutItemViewModel_shouldContainAccessoryTypeNone() {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
 
@@ -35,7 +35,7 @@ final class RocketsTableViewCellTest: XCTestCase {
         let viewModel = RocketsListItemViewModel(title: "Index", subtitle: "Latvia")
 
         sut.configure(with: viewModel)
-        
+
         XCTAssertEqual(sut.listContentConfiguration?.text, viewModel.title)
     }
 
@@ -47,7 +47,7 @@ final class RocketsTableViewCellTest: XCTestCase {
 
         XCTAssertEqual(sut.listContentConfiguration?.secondaryText, viewModel.subtitle)
     }
-    
+
     func test_configure_withItemViewModel_shouldContainAccessoryTypeDisclosureIndicator() {
         let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
         let viewModel = RocketsListItemViewModel(title: "Index", subtitle: "Latvia")

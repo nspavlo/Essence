@@ -33,6 +33,18 @@ final class IndexListControllerTest: XCTestCase {
         XCTAssertEqual(try? result?.get(), [IndexListItemViewModel(heading)])
     }
 
+    func test_onAppear_withCorruptedRepository_shouldReturnFailure() {
+        var result: Result<IndexListItemViewModels, IndexListError>?
+        let sut = IndexListController(repository: CorruptedIndexRepository())
+        sut.onUpdate = { result = $0 }
+
+        sut.onAppear()
+
+        var thrownError: Error?
+        XCTAssertThrowsError(try result?.get()) { thrownError = $0 }
+        XCTAssertTrue(thrownError is IndexListError)
+    }
+
     func test_selection_whenFirstIndexSelected_shouldReturnFirstHeading() {
         var heading: Heading?
         let headings: Headings = [.rocketsLegacy, .rockets]
@@ -44,5 +56,14 @@ final class IndexListControllerTest: XCTestCase {
         sut.selectItem(at: IndexPath(row: index, section: 0))
 
         XCTAssertEqual(heading, headings[index])
+    }
+}
+
+// MARK: Error
+
+struct CorruptedIndexRepository: IndexRepository {
+    func fetch(with completion: @escaping (Result<Headings, RequestError>) -> Void) -> Cancellable? {
+        completion(.failure(.error(code: 403, data: nil)))
+        return nil
     }
 }
