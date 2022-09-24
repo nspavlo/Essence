@@ -24,7 +24,7 @@ final class AppFlowCoordinator {
 
 extension AppFlowCoordinator: Coordinator {
     func start(animated: Bool) {
-        startIndexFlow(animated: false)
+        startIndexFlow(animated: animated)
     }
 
     func start(with link: Link, animated: Bool) {
