@@ -31,8 +31,7 @@ final class RocketsTableViewCellTest: XCTestCase {
     }
 
     func test_configure_withItemViewModel_shouldContainGivenTitle() {
-        let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
-        let viewModel: RocketsListItemViewModel = .stub()
+        let (viewModel, sut) = createSystemComponents()
 
         sut.configure(with: viewModel)
 
@@ -40,8 +39,7 @@ final class RocketsTableViewCellTest: XCTestCase {
     }
 
     func test_configure_withItemViewModel_shouldContainGivenSubtitle() {
-        let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
-        let viewModel: RocketsListItemViewModel = .stub()
+        let (viewModel, sut) = createSystemComponents()
 
         sut.configure(with: viewModel)
 
@@ -49,12 +47,25 @@ final class RocketsTableViewCellTest: XCTestCase {
     }
 
     func test_configure_withItemViewModel_shouldContainAccessoryTypeDisclosureIndicator() {
-        let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
-        let viewModel: RocketsListItemViewModel = .stub()
+        let (viewModel, sut) = createSystemComponents()
 
         sut.configure(with: viewModel)
 
         XCTAssertEqual(sut.accessoryType, .disclosureIndicator)
+    }
+}
+
+// MARK: Factory
+
+private extension RocketsTableViewCellTest {
+    func createSystemComponents(
+        file: StaticString = #file,
+        line: UInt = #line
+    ) -> (RocketsListItemViewModel, RocketsTableViewCell) {
+        let viewModel: RocketsListItemViewModel = .stub()
+        let sut = RocketsTableViewCell(style: .subtitle, reuseIdentifier: nil)
+        trackForMemoryLeaks(sut, file: file, line: line)
+        return (viewModel, sut)
     }
 }
 

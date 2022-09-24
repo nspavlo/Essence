@@ -10,8 +10,8 @@ import XCTest
 extension XCTestCase {
     func trackForMemoryLeaks(
         _ instance: AnyObject,
-        file: StaticString,
-        line: UInt
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) {
         addTeardownBlock { [weak instance] in
             let message = "Instance: \(String(describing: instance)) should have been deallocated."
