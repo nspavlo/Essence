@@ -36,7 +36,6 @@ extension RocketsFlowCoordinator: Coordinator {
             } else {
                 showRocketsList(animated: animated)
             }
-
         }
     }
 }
