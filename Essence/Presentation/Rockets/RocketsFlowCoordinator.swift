@@ -32,7 +32,7 @@ extension RocketsFlowCoordinator: Coordinator {
             fatalError("Unable to start \(self) with \(link)")
         case .rocket(let rocket):
             if let rocket {
-                showRocketDetails(with: rocket, animated: animated)
+                showRocketDetails(for: rocket, animated: animated)
             } else {
                 showRocketsList(animated: animated)
             }
@@ -53,7 +53,7 @@ private extension RocketsFlowCoordinator {
         router.push(viewController, animated: animated)
     }
 
-    func showRocketDetails(with _: Rocket, animated: Bool) {
+    func showRocketDetails(for _: Rocket, animated: Bool) {
         let viewController = UIViewController()
         viewController.view.backgroundColor = .systemBackground
         router.push(viewController, animated: animated)
